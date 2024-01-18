@@ -23,7 +23,10 @@ const Features = () => {
   return (
     <section className="container mx-auto px-5 md:px-16" id="features">
       <span className="service-name text-center">Why Choose Us ?</span>
-      <h4 className="title text-center"> Empower your education </h4>
+      <h4 className="title text-center">
+        {" "}
+        Empower your education with our focused execllence{" "}
+      </h4>
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 md:gap-5 text-center mt-10 md:mt-20">
         <FeatureProduct

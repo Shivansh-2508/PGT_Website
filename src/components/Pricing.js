@@ -23,18 +23,12 @@ const PricingCard = ({ name, title, price, btnText, trail }) => {
         <span className="text-neutral-500">{title}</span>
       </div>
       <div className="flex flex-col gap-5">
-        <Plan title="Drag & Drop Builder" />
-        <Plan title="1,000's of Templates" />
-        <Plan title="Blog Support Tools" />
-        <Plan title="eCommerce Store" />
+        <Plan title="Integrated - 2,25,000/- " />
+        <Plan title="CBSE - 2,30,000/-" />
+        <Plan title="HSC - 2,25,000/- " />
       </div>
       <div className="mx-auto">
-        <h2 class="text-4xl text-center leading-none flex items-center pb-4 mb-4">
-          <span>${price}</span>
-          <span class="text-lg ml-1 font-normal text-neutral-500">
-            /Monthly
-          </span>
-        </h2>
+        <h2 class="text-4xl text-center leading-none flex items-center pb-4 mb-4"></h2>
         <button className="w-fit capitalize text-base hover:bg-rose-600 hover:shadow-md hover:shadow-rose-600 hover:border-2 border-2 border-transparent py-3 px-6 text-white bg-rose-600 hover:border-rose-600 hover:text-white rounded-full">
           {btnText}
         </button>
@@ -85,56 +79,56 @@ const Pricing = () => {
       {plan === "Monthly Plan" ? (
         <Carousel {...carouselParams}>
           <PricingCard
-            name="Free Plan"
+            name="Boards + JEE/NEET"
             title="For Small teams or office"
             price="0"
-            btnText="Start free trail"
+            btnText="View Details"
           />
           <PricingCard
-            name="Business king"
+            name="BOARDS"
             title="For Enterprise business"
             price="15"
-            btnText="Create account"
-            trail="Or Start 14 Days trail"
+            btnText="View Details"
+            trail="Start your journey"
           />
           <div className="relative">
             <span className="absolute -top-1 left-10 bg-rose-600 text-white px-2 py-1 rounded-md">
               Suggested
             </span>
             <PricingCard
-              name="Pro Master"
+              name="Boards + HSC"
               title="For pro level developers"
               price="24"
-              btnText="Create account"
-              trail="Or Start 14 Days trail"
+              btnText="View Details"
+              trail="Start your journey"
             />
           </div>
         </Carousel>
       ) : (
         <Carousel {...carouselParams}>
           <PricingCard
-            name="Free Plan"
+            name="Boards + JEE/NEET"
             title="For Small teams or office"
             price="0"
-            btnText="Start free trail"
+            btnText="View Details"
           />
           <PricingCard
-            name="Business/Company"
+            name="BOARDS"
             title="For Enterprise business"
-            price="25"
-            btnText="Create account"
-            trail="Or Start 10 Days trail"
+            price="15"
+            btnText="View Details"
+            trail="Start your journey"
           />
           <div className="relative">
             <span className="absolute -top-1 left-10 bg-rose-600 text-white px-2 py-1 rounded-md">
               Suggested
             </span>
             <PricingCard
-              name="Pro Master"
+              name="Boards + HSC"
               title="For pro level developers"
-              price="54"
-              btnText="Create account"
-              trail="Or Start 10 Days trail"
+              price="24"
+              btnText="View Details"
+              trail="Start your journey"
             />
           </div>
         </Carousel>
