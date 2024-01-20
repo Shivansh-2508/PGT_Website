@@ -5,10 +5,13 @@ import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ButtonGroup from "./ButtonGroup";
+import { useEffect } from "react";
+import { useState } from "react";
+import reviewsData from "../API/data.json";
+import hello from "../../public/team/1.png";
+// TODO : Add Props to Card Component
 
-// TODO : Add Props to Card Component to make it reusable
-
-const Card = ({ star, title, imgSrc }) => {
+const Card = ({ star, title, desc }) => {
   return (
     <div className='mx-2 flex flex-col gap-4 select-none cursor-pointer border border-[#4e4e4e31] p-10 rounded-lg hover:shadow-xl transition-all'>
       <div className='text-rose-600'>
@@ -19,19 +22,13 @@ const Card = ({ star, title, imgSrc }) => {
         {star}
       </div>
       <h2 className='text-lg font-semibold mb-2'>{title}</h2>
-      <p className='leading-loose'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-        voluptate, voluptas, quibusdam, voluptatibus iusto doloremque quae
-        fugiat dolorum molestias quos doloribus. Quisquam voluptate, voluptas,
-        quibusdam, voluptatibus iusto doloremque quae fugiat dolorum molestias
-        quos doloribus.
-      </p>
+      <p className='leading-loose'>{desc}</p>
       <div className='flex items-center gap-4 mt-5'>
-        <Image src={imgSrc} width={50} height={50} alt='testimonials' />
+        {/* <Image src={imgSrc} width={50} height={50} alt='testimonials' /> */}
         <div>
-          <h3 className='font-semibold'>Naseem Khan</h3>
+          <h3 className='font-semibold'></h3>
           <Link href='#' target='_blank' className='text-rose-600 font-[500]'>
-            @funnymoment
+            @Google Reviews
           </Link>
         </div>
       </div>
@@ -40,6 +37,12 @@ const Card = ({ star, title, imgSrc }) => {
 };
 
 const Testimonials = () => {
+  const [reviews, setReviews] = useState(null);
+
+  useEffect(() => {
+    // Set the data from the imported JSON file
+    setReviews(reviewsData);
+  }, []);
   return (
     <section
       className='relative container mx-auto px-5 md:px-16 flex flex-col gap-5'
@@ -48,35 +51,21 @@ const Testimonials = () => {
         <span className='service-name text-center '>TESTIMONIAL</span>
         <h2 className='title text-center '>Meet Client Satisfaction</h2>
       </div>
-      <Carousel {...carouselParams}>
-        <div>
-          <Card
-            star={<StarHalfRoundedIcon />}
-            title='Modern look & trending design'
-            imgSrc='/testimonials/1.png'
-          />
-        </div>
-        <div>
-          <Card
-            title='Layout and organized layers'
-            imgSrc='/testimonials/2.png'
-          />
-        </div>
-        <div>
-          <Card
-            star={<StarRoundedIcon />}
-            title='Design Quality & performance'
-            imgSrc='/testimonials/3.png'
-          />
-        </div>
-        <div>
-          <Card
-            star={<StarHalfRoundedIcon />}
-            title='Layout and organized layers'
-            imgSrc='/testimonials/4.png'
-          />
-        </div>
-      </Carousel>
+      {reviews &&
+        reviews.length > 0 && ( // Check if reviews array exists and has elements
+          <Carousel {...carouselParams}>
+            {reviews.map((review, index) => (
+              <div key={index}>
+                <Card
+                  key={index}
+                  star={<StarHalfRoundedIcon />}
+                  title={review.username}
+                  desc={review.snippet}
+                />
+              </div>
+            ))}
+          </Carousel>
+        )}
     </section>
   );
 };

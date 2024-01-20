@@ -11,7 +11,7 @@ html {
 }
 
 .service-name {
-  @apply text-black uppercase block font-semibold text-3xl tracking-widest;
+  @apply text-rose-600 uppercase block font-semibold text-sm tracking-widest;
 }
 
 .title {
