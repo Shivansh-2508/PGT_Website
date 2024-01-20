@@ -12,7 +12,7 @@ const HeroSection = () => {
       <div className="md:w-2/3 lg:w-1/2 container px-5 md:px-16 mx-auto">
         <h1 className="flex flex-col gap-2 md:gap-5">
           <p className="capitalize text-5xl md:text-6xl 2xl:text-7xl font-bold">
-            PINNACLE GROUP TsaUITIONS
+            PINNACLE GROUP TUITIONS
           </p>
         </h1>
 
