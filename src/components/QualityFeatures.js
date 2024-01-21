@@ -78,7 +78,7 @@ const QualityFeatures = () => {
       <span className="service-name text-center ">QUALITY FEATURES</span>
       <h2 className="title text-center ">Amazing useful features</h2>
 
-      <div className="grid gap-x-10 gap-y-16 sm:grid-cols-3 mt-10 md:mt-20 lg:w-[88%] mx-auto">
+      <div className="grid gap-x-4 gap-y-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 md:mt-20 lg:w-[88%] mx-auto">
         {featuresData.map((feature, index) => (
           <QualityFeature key={index} {...feature} />
         ))}
