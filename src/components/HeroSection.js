@@ -12,9 +12,17 @@ const HeroSection = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true, // Enable automatic scrolling
+    autoplay: true,
     autoplaySpeed: 3000,
   };
+
+  // Array of image information
+  const images = [
+    { src: "/smp3.jpg", width: 500, height: 200, alt: "carousel Image 3" },
+    { src: "/smp1.png", width: 600, height: 300, alt: "carousel Image 1" },
+    { src: "/smp.jpg", width: 600, height: 300, alt: "carousel Image 2" },
+    { src: "/smp2.jpg", width: 600, height: 300, alt: "carousel Image 3" },
+  ];
 
   return (
     <section
@@ -35,42 +43,11 @@ const HeroSection = () => {
       </div>
 
       <Slider {...sliderSettings} className="w-full relative">
-        <div className="relative">
-          <Image
-            src={"/hero.jpeg"}
-            width={500} // Adjust the width to your desired size
-            height={200} // Adjust the height to maintain the same aspect ratio
-            alt="carousel Image 3"
-            className="object- w-full h-full"
-          />
-        </div>
-        <div className="relative">
-          <Image
-            src={"/smp1.jpg"}
-            width={600}
-            height={300}
-            alt="carousel Image 1"
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div className="relative">
-          <Image
-            src={"/smp.jpeg"}
-            width={600}
-            height={300}
-            alt="carousel Image 2"
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div className="relative">
-          <Image
-            src={"/smp3.jpg"}
-            width={600}
-            height={300}
-            alt="carousel Image 3"
-            className="object-cover w-full h-full"
-          />
-        </div>
+        {images.map((image, index) => (
+          <div key={index} className="relative">
+            <Image {...image} className="object- w-full h-full" />
+          </div>
+        ))}
       </Slider>
     </section>
   );
