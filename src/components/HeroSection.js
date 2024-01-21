@@ -14,11 +14,19 @@ const HeroSection = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   // Array of image information
   const images = [
-    { src: "/smp3.jpg", width: 500, height: 200, alt: "carousel Image 3" },
+    { src: "/smp3.jpg", width: 500, height: 300, alt: "carousel Image 3" },
     { src: "/smp1.png", width: 600, height: 300, alt: "carousel Image 1" },
     { src: "/smp.jpg", width: 600, height: 300, alt: "carousel Image 2" },
     { src: "/smp2.jpg", width: 600, height: 300, alt: "carousel Image 3" },
