@@ -2,14 +2,14 @@ import Image from "next/image";
 
 const QualityFeature = ({ imgSrc, title, subHeading, desc }) => {
   return (
-    <div className="flex items-start lg:flex-row sm:flex-col gap-1 sm:gap-4 lg:gap-8">
-      <Image src={imgSrc} width={80} height={80} alt="features" />
-      <div className="leading-loose">
-        <h3 className="text-lg md:text-xl font-semibold mb-1">{title}</h3>
+    <div className='flex items-start lg:flex-row sm:flex-col gap-1 sm:gap-4 lg:gap-8'>
+      <Image src={imgSrc} width={80} height={80} alt='features' />
+      <div className='leading-loose'>
+        <h3 className='text-lg md:text-xl font-semibold mb-1'>{title}</h3>
         {subHeading && (
-          <h4 className="text-sm font-medium mb-4">{subHeading}</h4>
+          <h4 className='text-sm font-medium mb-4'>{subHeading}</h4>
         )}
-        <p className="text-sm">{desc}</p> {/* Adjusted font size here */}
+        <p className='text-sm'>{desc}</p> {/* Adjusted font size here */}
       </div>
     </div>
   );
@@ -74,11 +74,11 @@ const QualityFeatures = () => {
   ];
 
   return (
-    <section className="container mx-auto px-5 md:px-16">
-      <span className="service-name text-center ">QUALITY FEATURES</span>
-      <h2 className="title text-center ">Amazing useful features</h2>
+    <section className='container mx-auto px-5 md:px-16'>
+      <span className='service-name text-center '>QUALITY FEATURES</span>
+      <h2 className='title text-center '>Amazing useful features</h2>
 
-      <div className="grid gap-x-4 gap-y-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 md:mt-20 lg:w-[88%] mx-auto">
+      <div className='grid gap-x-4 gap-y-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 md:mt-20 lg:w-[88%] mx-auto'>
         {featuresData.map((feature, index) => (
           <QualityFeature key={index} {...feature} />
         ))}
