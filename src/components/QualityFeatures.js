@@ -19,7 +19,7 @@ const QualityFeatures = () => {
   const featuresData = [
     {
       imgSrc: "/features/1.svg",
-      title: "SMALL BATCH",
+      title: "SMALL BATCH ",
       subHeading: "10 Students a Batch",
       desc: "With small batches students are bound to pay attention & cannot escape the watchful EYES of the teacher",
     },
