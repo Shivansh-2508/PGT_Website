@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@emailjs/browser':
+    specifier: ^3.12.1
+    version: 3.12.1
   '@emotion/react':
     specifier: ^11.11.1
     version: 11.11.3(react@18.2.0)
@@ -197,6 +200,11 @@ packages:
   /@ctrl/tinycolor@3.6.1:
     resolution: {integrity: sha512-SITSV6aIXsuVNV3f3O0f2n/cgyEDWoSqtZMYiAmcsYHydcKrOz3gUxB/iXd/Qf08+IZX4KpgNbvUdMBmWz+kcA==}
     engines: {node: '>=10'}
+    dev: false
+
+  /@emailjs/browser@3.12.1:
+    resolution: {integrity: sha512-C5nK07CgSCFx3onsuRt/ZaaMvIi0T3SHHanM7fKozjSvbZu+OjHHP9W608fYpic0OavF7yIlfy4+lRDO33JdbA==}
+    engines: {node: '>=14.0.0'}
     dev: false
 
   /@emotion/babel-plugin@11.11.0:
