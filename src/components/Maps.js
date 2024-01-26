@@ -1,6 +1,9 @@
 const Maps = () => {
   return (
-    <section className='container mx-auto px-5 md:px-16 lg:px-24' id='Maps'>
+    <section
+      className='container mx-auto px-5 md:px-16 lg:px-24'
+      id='Maps'
+      data-aos='fade-up'>
       <span className='service-name text-center '>Where are we at ?</span>
       <h2 className='title text-center md:w-1/2 mx-auto'>Find US</h2>
 

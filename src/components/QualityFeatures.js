@@ -75,10 +75,16 @@ const QualityFeatures = () => {
 
   return (
     <section className='container mx-auto px-5 md:px-16'>
-      <span className='service-name text-center '>QUALITY FEATURES</span>
-      <h2 className='title text-center '>Amazing useful features</h2>
+      <span className='service-name text-center ' data-aos='fade-up'>
+        QUALITY FEATURES
+      </span>
+      <h2 className='title text-center ' data-aos='fade-up'>
+        Amazing useful features
+      </h2>
 
-      <div className='grid gap-x-4 gap-y-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 md:mt-20 lg:w-[88%] mx-auto'>
+      <div
+        className='grid gap-x-4 gap-y-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 md:mt-20 lg:w-[88%] mx-auto'
+        data-aos='fade-up'>
         {featuresData.map((feature, index) => (
           <QualityFeature key={index} {...feature} />
         ))}
