@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
@@ -11,6 +10,7 @@ import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
+import { Link } from "react-scroll";
 
 // TODO :- Make add the content for the links and NAV
 
@@ -39,7 +39,7 @@ const Navbar = () => {
         theme === "dark" ? "bg-[#121212]" : "bg-white text-black"
       } w-full z-50 fixed top-0 left-0 py-4 mb-10`}>
       <div className='container px-5 md:px-16 flex items-center justify-between mx-auto'>
-        <Link href={"/"}>
+        <Link to={"/"} smooth={true} offset={50} duration={50}>
           <h2 className='text-3xl'>
             <span className='text-rose-600'>P</span>GT.
           </h2>
@@ -66,7 +66,9 @@ const Navbar = () => {
                   selectedItem === link ? "text-rose-600" : ""
                 } capitalize border-b py-4 md:border-none md:py-0 hover:text-rose-600`}
                 onClick={() => setSelectedItem(link)}>
-                <Link href={`#${link}`}>{link}</Link>
+                <Link to={`${link}`} smooth={true} offset={50} duration={50}>
+                  {link}
+                </Link>
               </li>
             ))}
             <div className='md:hidden mx-auto absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-3'>
