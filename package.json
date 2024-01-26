@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.13.7",
     "@mui/material": "^5.13.7",
+    "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.14",
     "next": "13.4.8",
@@ -20,10 +21,16 @@
     "nextjs-progressbar": "^0.0.16",
     "postcss": "^8.4.24",
     "react": "^18.2.0",
+    "react-calendar-timeline": "^0.28.0",
     "react-dom": "^18.2.0",
+    "react-horizontal-scrolling-menu": "^4.1.2",
+    "react-horizontal-timeline": "^1.5.3",
     "react-multi-carousel": "^2.8.4",
+    "react-router-dom": "^6.21.3",
     "react-slick": "^0.29.0",
+    "react-vertical-timeline-component": "^3.6.0",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.8",
     "tailwindcss": "3.3.2"
   }
 }
