@@ -45,7 +45,8 @@ const Pricing = () => {
   return (
     <section
       className='relative container mx-auto px-5 md:px-16 flex flex-col gap-5'
-      id='pricing'>
+      id='pricing'
+      data-aos='fade-up'>
       <div>
         <span className='service-name text-center '>PRICING PLAN</span>
         <h2 className='title text-center '>Choose your pricing policy</h2>

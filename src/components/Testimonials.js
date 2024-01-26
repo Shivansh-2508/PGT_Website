@@ -13,21 +13,23 @@ import hello from "../../public/team/1.png";
 
 const Card = ({ star, title, desc }) => {
   return (
-    <div className="mx-2 flex flex-col gap-4 select-none cursor-pointer border border-[#4e4e4e31] p-10 rounded-lg hover:shadow-xl transition-all">
-      <div className="text-rose-600">
+    <div
+      className='mx-2 flex flex-col gap-4 select-none cursor-pointer border border-[#4e4e4e31] p-10 rounded-lg hover:shadow-xl transition-all'
+      data-aos='fade-up'>
+      <div className='text-rose-600'>
         <StarRoundedIcon />
         <StarRoundedIcon />
         <StarRoundedIcon />
         <StarRoundedIcon />
         {star}
       </div>
-      <h2 className="text-lg font-semibold mb-2">{title}</h2>
-      <p className="leading-loose">{desc}</p>
-      <div className="flex items-center gap-4 mt-5">
+      <h2 className='text-lg font-semibold mb-2'>{title}</h2>
+      <p className='leading-loose'>{desc}</p>
+      <div className='flex items-center gap-4 mt-5'>
         {/* <Image src={imgSrc} width={50} height={50} alt='testimonials' /> */}
         <div>
-          <h3 className="font-semibold"></h3>
-          <Link href="#" target="_blank" className="text-rose-600 font-[500]">
+          <h3 className='font-semibold'></h3>
+          <Link href='#' target='_blank' className='text-rose-600 font-[500]'>
             @Google Reviews
           </Link>
         </div>
@@ -45,12 +47,11 @@ const Testimonials = () => {
   }, []);
   return (
     <section
-      className="relative container mx-auto px-5 md:px-16 flex flex-col gap-5"
-      id="testimonial"
-    >
+      className='relative container mx-auto px-5 md:px-16 flex flex-col gap-5'
+      id='testimonial'>
       <div>
-        <span className="service-name text-center ">TESTIMONIAL</span>
-        <h2 className="title text-center ">Meet Client Satisfaction</h2>
+        <span className='service-name text-center '>TESTIMONIAL</span>
+        <h2 className='title text-center '>Meet Client Satisfaction</h2>
       </div>
       {reviews &&
         reviews.length > 0 && ( // Check if reviews array exists and has elements

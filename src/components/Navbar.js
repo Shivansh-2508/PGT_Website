@@ -39,7 +39,7 @@ const Navbar = () => {
         theme === "dark" ? "bg-[#121212]" : "bg-white text-black"
       } w-full z-50 fixed top-0 left-0 py-4 mb-10`}>
       <div className='container px-5 md:px-16 flex items-center justify-between mx-auto'>
-        <Link to={"/"} smooth={true} offset={50} duration={50}>
+        <Link to={"home"} smooth={true} offset={50} duration={50}>
           <h2 className='text-3xl'>
             <span className='text-rose-600'>P</span>GT.
           </h2>
