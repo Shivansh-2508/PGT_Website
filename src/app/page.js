@@ -17,9 +17,9 @@ export default function Home() {
       <HeroSection />
       <QualityFeatures />
       <Features />
-      <Services />
+      
 
-      <CoreFeatures />
+      
       <Work />
       <Pricing />
       <Team />
