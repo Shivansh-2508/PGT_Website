@@ -14,7 +14,6 @@ import Services from "@/components/Services";
 import Subscribe from "@/components/Subscribe";
 import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
-import Time from "@/components/Time";
 import Work from "@/components/Work";
 import Head from "next/head";
 
@@ -40,7 +39,6 @@ export default function Home() {
         {/* <Services /> */}
         {/* <CoreFeatures /> */}
         <Work />
-        {/* <Time /> */}
         <Community />
 
         <Pricing />
