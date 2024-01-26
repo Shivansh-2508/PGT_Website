@@ -71,11 +71,12 @@ const Subscribe = () => {
     className="rounded-lg bg-white px-3 py-4 text-center sm:text-left sm:p-6 border-none outline-none w-full font-[500] text-black mb-4"
     rows={4} // Adjust the number of rows as needed
   />
-</form>
-
-<button className="sm:w-fit w-full capitalize md:text-base text-sm hover:border-2 border-2 border-transparent font-semibold py-4 px-7 text-rose-600 bg-white hover:border-rose-600 hover:shadow-2xl hover:shadow-rose-600  rounded-full">
+  <button className="sm:w-fit w-full capitalize md:text-base text-sm hover:border-2 border-2 border-transparent font-semibold py-4 px-7 text-rose-600 bg-white hover:border-rose-600 hover:shadow-2xl hover:shadow-rose-600  rounded-full">
   Submit
 </button>
+</form>
+
+
 
 
 
