@@ -34,12 +34,16 @@ const Subscribe = () => {
   };
 
   return (
-    <section className='container mx-auto px-5 md:px-16' data-aos='fade-up'>
+    <section
+      className='container mx-auto px-8   md:px-20'
+      id='Connect'
+      data-aos='fade-up'>
       <div className='bg-rose-600 rounded-lg text-white py-16 sm:py-24'>
         <div className='flex flex-col items-center gap-4 sm:gap-6 w-[90%] md:w-4/5 lg:w-1/2 text-center mx-auto'>
           <h2 className='text-2xl sm:text-4xl font-semibold'>Contact us</h2>
           <p className='leading-loose font-[500]'>
-            Reach out to us and we will get back
+            Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod
+            tempor incididunt labore dolore.
           </p>
           <form className='relative w-full mb-8' onSubmit={handleSubmit}>
             <input
