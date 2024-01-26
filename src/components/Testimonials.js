@@ -15,13 +15,9 @@ const Card = ({ star, title, desc }) => {
   return (
     <div className="mx-2 flex flex-col gap-4 select-none cursor-pointer border border-[#4e4e4e31] p-10 rounded-lg hover:shadow-xl transition-all">
       <div className="text-rose-600">
-        <StarRoundedIcon />
-        <StarRoundedIcon />
-        <StarRoundedIcon />
-        <StarRoundedIcon />
-        {star}
+       
       </div>
-      <h2 className="text-lg font-semibold mb-2">{title}</h2>
+      <h2 className="text-lg font-bold mb-2">{title}</h2>
       <p className="leading-loose">{desc}</p>
       <div className="flex items-center gap-4 mt-5">
         {/* <Image src={imgSrc} width={50} height={50} alt='testimonials' /> */}

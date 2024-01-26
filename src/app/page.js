@@ -43,9 +43,10 @@ export default function Home() {
 
         <Pricing />
         <Team />
-        <Testimonials />
+        
         <Subscribe />
         <Maps />
+        <Testimonials />
       </div>
     </>
   );

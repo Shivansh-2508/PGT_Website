@@ -48,7 +48,7 @@ const Pricing = () => {
       id='pricing'>
       <div>
         <span className='service-name text-center '>PRICING PLAN</span>
-        <h2 className='title text-center '>Choose your pricing policy</h2>
+       
       </div>
 
       <div className='relative transition-all flex gap-1 mx-auto w-fit bg-slate-100 p-2 rounded-full'>
@@ -63,13 +63,11 @@ const Pricing = () => {
           z-[1] capitalize text-base hover:border-2 border-2 border-transparent py-3 px-5 hover:border-rose-600 rounded-full`}>
           Monthly Plan
         </button> */}
-        <button
-          onClick={() => setPlan("Annual Plan")}
-          className={`
-          ${plan === "Annual Plan" ? "bg-rose-600 text-white" : "text-rose-600"}
-          z-[1] capitalize text-base hover:border-2 border-2 border-transparent py-3 px-5 hover:border-rose-600 rounded-full`}>
+         <div className='capitalize text-sm sm:text-base   font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 rounded-full'>
+            
+            
           Annual Plan
-        </button>
+        </div>
       </div>
 
       {plan === "Monthly Plan" ? (
@@ -85,18 +83,18 @@ const Pricing = () => {
             title='For Enterprise business'
             price='15'
             btnText='View Details'
-            trail='Start your journey'
+            trail=''
           />
           <div className='relative'>
-            <span className='absolute -top-1 left-10 bg-rose-600 text-white px-2 py-1 rounded-md'>
+           {/* <span className='absolute -top-1 left-10 bg-rose-600 text-white px-2 py-1 rounded-md'>
               Suggested
-            </span>
+      </span>*/}
             <PricingCard
               name='Boards + HSC'
               title='For pro level developers'
               price='24'
               btnText='View Details'
-              trail='Start your journey'
+              trail=''
             />
           </div>
         </Carousel>
@@ -113,18 +111,18 @@ const Pricing = () => {
             title='For Enterprise business'
             price='15'
             btnText='View Details'
-            trail='Start your journey'
+            trail=''
           />
           <div className='relative'>
-            <span className='absolute -top-1 left-10 bg-rose-600 text-white px-2 py-1 rounded-md'>
+           {/*} <span className='absolute -top-1 left-10 bg-rose-600 text-white px-2 py-1 rounded-md'>
               Suggested
-            </span>
+      </span>*/}
             <PricingCard
               name='Boards + HSC'
               title='For pro level developers'
               price='24'
               btnText='View Details'
-              trail='Start your journey'
+              trail=''
             />
           </div>
         </Carousel>
