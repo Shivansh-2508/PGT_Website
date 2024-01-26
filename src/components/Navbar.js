@@ -11,6 +11,10 @@ import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import { Link } from "react-scroll";
+import Image1 from "../../public/dark_logo.svg";
+import Image2 from "../../public/light_logo.svg";
+import Image from "next/image";
+
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -35,12 +39,20 @@ const Navbar = () => {
       ref={navbar}
       className={`${
         theme === "dark" ? "bg-[#121212]" : "bg-white text-black"
-      } w-full z-50 fixed top-0 left-0 py-4 mb-10`}
-    >
-      <div className="container px-5 md:px-16 flex items-center justify-between mx-auto">
-        <Link to={"/"} smooth={true} offset={50} duration={50}>
-          <h2 className="text-3xl">
-            <span className="text-rose-600">P</span>GT.
+      } w-full z-50 fixed top-0 left-0 py-4 mb-10`}>
+      <div className='container px-5 md:px-16 flex items-center justify-between mx-auto'>
+        <Link to={"/"} smooth={true} offset={0} duration={1000}>
+          <h2 className='text-3xl'>
+            {theme === "dark" ? (
+              <Image
+                src={Image1}
+                alt='Dark Image'
+                className='w-full sm:w-1/2'
+              />
+            ) : (
+              <Image src={Image2} alt='light' className='w-full sm:w-1/2' />
+            )}
+
           </h2>
         </Link>
 
@@ -73,8 +85,8 @@ const Navbar = () => {
                 className={`${
                   selectedItem === link ? "text-rose-600" : ""
                 } capitalize border-b py-4 md:border-none md:py-0 hover:text-rose-600 cursor-pointer`} // Add cursor-pointer class
-                onClick={() => setSelectedItem(link)}
-              >
+                onClick={() => setSelectedItem(link)}>
+
                 <Link to={`${link}`} smooth={true} offset={0} duration={1000}>
                   {link}
                 </Link>
@@ -96,10 +108,12 @@ const Navbar = () => {
           </ul>
         </div>
 
+
         <div className="flex items-center gap-2 sm:gap-4 md:gap-2 lg:gap-4">
           <button className="capitalize text-sm sm:text-base border-2 hover:border-2 font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 hover:border-rose-600 hover:bg-rose-600 hover:text-white rounded-full">
             <Link href={"#pricing"}>Get Started</Link>
           </button>
+
           <button>
             {theme === "dark" ? (
               <LightModeRoundedIcon
