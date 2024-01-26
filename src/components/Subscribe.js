@@ -8,9 +8,12 @@ const Subscribe = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-  
-
-    emailjs.sendForm(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, form.current, process.env.EMAILJS_USER_ID)
+    emailjs.sendForm(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      form.current,
+      "ZdrZwGjBnX6p6Q9Jw"
+    )
       .then((result) => {
           console.log(result.text);
           alert('Message sent');
@@ -20,7 +23,6 @@ const Subscribe = () => {
           alert('Error');
       });
   };
-
   return (
     <section className="container mx-auto px-8 md:px-20" id='Connect'>
     <div className="bg-rose-600 rounded-lg text-white py-16 sm:py-24">
