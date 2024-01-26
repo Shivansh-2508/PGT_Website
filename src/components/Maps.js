@@ -1,6 +1,6 @@
 const Maps = () => {
   return (
-    <section className='container mx-auto px-5 md:px-16 lg:px-24'>
+    <section className='container mx-auto px-5 md:px-16 lg:px-24' id='Maps'>
       <span className='service-name text-center '>Where are we at ?</span>
       <h2 className='title text-center md:w-1/2 mx-auto'>Find US</h2>
 

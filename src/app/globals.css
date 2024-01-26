@@ -18,6 +18,8 @@ html {
   @apply capitalize text-2xl sm:text-3xl font-semibold my-3;
 }
 
+
+
 .rotate {
   transform: rotateX(180deg);
 }
