@@ -11,8 +11,9 @@ import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import { Link } from "react-scroll";
-
-// TODO :- Make add the content for the links and NAV
+import Image1 from "../../public/dark_logo.svg";
+import Image2 from "../../public/light_logo.svg";
+import Image from "next/image";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -41,7 +42,11 @@ const Navbar = () => {
       <div className='container px-5 md:px-16 flex items-center justify-between mx-auto'>
         <Link to={"/"} smooth={true} offset={0} duration={1000}>
           <h2 className='text-3xl'>
-            <span className='text-rose-600'>P</span>GT.
+            {theme === "dark" ? (
+              <Image src={Image1} alt='Dark Image' width={100} />
+            ) : (
+              <Image src={Image2} alt='light' width={100} />
+            )}
           </h2>
         </Link>
 
@@ -51,7 +56,7 @@ const Navbar = () => {
               theme === "dark"
                 ? "bg-[#121212] text-white"
                 : "bg-white text-black"
-            } z-50 flex md:items-center gap-1 md:gap-5 lg:gap-10 md:relative absolute top-0 md:left-0 w-80 transition-all duration-1000 h-screen md:w-auto md:h-auto flex-col md:flex-row shadow-2xl py-24 px-10 md:p-0 md:shadow-none`}>
+            } z-50 flex md:items-center gap-1 md:gap-5 lg:gap-10 md:relative absolute top-0 md:left-0 w-80 transition-all duration-500 h-screen md:w-auto md:h-auto flex-col md:flex-row shadow-2xl py-24 px-10 md:p-0 md:shadow-none`}>
             <button
               className={`${
                 theme === "dark" ? "text-white" : "text-black"
@@ -59,21 +64,25 @@ const Navbar = () => {
               onClick={() => setToggleMenu(false)}>
               <CloseOutlinedIcon />
             </button>
-            {["home", "features", "pricing", "Connect", "Maps", "testimonial"].map(
-  (link) => (
-    <li
-      key={link}
-      className={`${
-        selectedItem === link ? "text-rose-600" : ""
-      } capitalize border-b py-4 md:border-none md:py-0 hover:text-rose-600 cursor-pointer`} // Add cursor-pointer class
-      onClick={() => setSelectedItem(link)}
-    >
-      <Link to={`${link}`} smooth={true} offset={0} duration={1000}>
-        {link}
-      </Link>
-    </li>
-  )
-)}
+            {[
+              "home",
+              "features",
+              "pricing",
+              "Connect",
+              "Maps",
+              "testimonial",
+            ].map((link) => (
+              <li
+                key={link}
+                className={`${
+                  selectedItem === link ? "text-rose-600" : ""
+                } capitalize border-b py-4 md:border-none md:py-0 hover:text-rose-600 cursor-pointer`} // Add cursor-pointer class
+                onClick={() => setSelectedItem(link)}>
+                <Link to={`${link}`} smooth={true} offset={0} duration={1000}>
+                  {link}
+                </Link>
+              </li>
+            ))}
 
             <div className='md:hidden mx-auto absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-3'>
               <Link href='#' target='_blank'>
@@ -91,7 +100,10 @@ const Navbar = () => {
         </div>
 
         <div className='flex items-center gap-2 sm:gap-4 md:gap-2 lg:gap-4'>
-          
+          <button className='capitalize text-sm sm:text-base border-2 hover:border-2 font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 hover:border-rose-600 hover:bg-rose-600 hover:text-white rounded-full'>
+            <Link href={"#pricing"}>Get Started</Link>
+          </button>
+
           <button>
             {theme === "dark" ? (
               <LightModeRoundedIcon
