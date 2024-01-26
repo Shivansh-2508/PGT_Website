@@ -11,7 +11,9 @@ import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import { Link } from "react-scroll";
-
+import Image1 from "../../public/dark_logo.svg";
+import Image2 from "../../public/light_logo.svg";
+import Image from "next/image";
 // TODO :- Make add the content for the links and NAV
 
 const Navbar = () => {
@@ -41,7 +43,15 @@ const Navbar = () => {
       <div className='container px-5 md:px-16 flex items-center justify-between mx-auto'>
         <Link to={"/"} smooth={true} offset={0} duration={1000}>
           <h2 className='text-3xl'>
-            <span className='text-rose-600'>P</span>GT.
+            {theme === "dark" ? (
+              <Image
+                src={Image1}
+                alt='Dark Image'
+                className='w-full sm:w-1/2'
+              />
+            ) : (
+              <Image src={Image2} alt='light' className='w-full sm:w-1/2' />
+            )}
           </h2>
         </Link>
 
@@ -59,21 +69,25 @@ const Navbar = () => {
               onClick={() => setToggleMenu(false)}>
               <CloseOutlinedIcon />
             </button>
-            {["home", "features", "pricing", "Connect", "Maps", "testimonial"].map(
-  (link) => (
-    <li
-      key={link}
-      className={`${
-        selectedItem === link ? "text-rose-600" : ""
-      } capitalize border-b py-4 md:border-none md:py-0 hover:text-rose-600 cursor-pointer`} // Add cursor-pointer class
-      onClick={() => setSelectedItem(link)}
-    >
-      <Link to={`${link}`} smooth={true} offset={0} duration={1000}>
-        {link}
-      </Link>
-    </li>
-  )
-)}
+            {[
+              "home",
+              "features",
+              "pricing",
+              "Connect",
+              "Maps",
+              "testimonial",
+            ].map((link) => (
+              <li
+                key={link}
+                className={`${
+                  selectedItem === link ? "text-rose-600" : ""
+                } capitalize border-b py-4 md:border-none md:py-0 hover:text-rose-600 cursor-pointer`} // Add cursor-pointer class
+                onClick={() => setSelectedItem(link)}>
+                <Link to={`${link}`} smooth={true} offset={0} duration={1000}>
+                  {link}
+                </Link>
+              </li>
+            ))}
 
             <div className='md:hidden mx-auto absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-3'>
               <Link href='#' target='_blank'>
@@ -91,7 +105,6 @@ const Navbar = () => {
         </div>
 
         <div className='flex items-center gap-2 sm:gap-4 md:gap-2 lg:gap-4'>
-          
           <button>
             {theme === "dark" ? (
               <LightModeRoundedIcon
