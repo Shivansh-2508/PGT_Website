@@ -8,13 +8,9 @@ const Subscribe = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Perform validation
-    if (!form.current.user_name.value || !form.current.user_email.value || !form.current.message.value) {
-      setErrorMessage('Please fill in all required fields.');
-      return;
-    }
+  
 
-    emailjs.sendForm('service_91l538e', 'template_7cvoylt', form.current, 'ZdrZwGjBnX6p6Q9Jw')
+    emailjs.sendForm(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, form.current, process.env.EMAILJS_USER_ID)
       .then((result) => {
           console.log(result.text);
           alert('Message sent');
