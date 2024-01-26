@@ -5,49 +5,69 @@ import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// WorkCard component
-const WorkCard = ({ num, title }) => (
-  <div
-    className="w-full flex flex-col gap-5 text-center md:text-left"
-    data-aos="fade-up"
-  >
-    <span className="md:mx-0 mx-auto text-3xl w-fit font-bold text-blue-800 bg-white rounded-full py-4 px-4">
-      {num}
-    </span>
-    <h2
-      className="text-xl font-semibold leading-relaxed text-white"
-      data-aos="fade-up"
-      data-aos-delay="100"
-    >
-      {title}
-    </h2>
+// Roadmap component to display XI and XII roadmaps
+const Roadmap = ({ title, description, data }) => (
+  <div>
+    <div className="text-center">
+      <h1
+        className="uppercase block font-semibold text-3xl tracking-widest text-white"
+        data-aos="fade-up"
+      >
+        {title}
+      </h1>
+      <p
+        className="text-xl font-semibold leading-relaxed text-white mt-3"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        {description}
+      </p>
+    </div>
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-5">
+      {data.map((item, index) => (
+        <div key={index}>
+          <div className="relative" data-aos="fade-up" data-aos-delay="200">
+            <div
+              className="w-full flex flex-col gap-5 text-center md:text-left"
+              data-aos="fade-up"
+            >
+              <span className="md:mx-0 mx-auto text-3xl w-fit font-bold text-blue-800 bg-white rounded-full py-4 px-4">
+                {item.num}
+              </span>
+              <h2
+                className="text-xl font-semibold leading-relaxed text-white"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                {item.title}
+              </h2>
+            </div>
+            {index < data.length - 1 && (
+              <Image
+                src="/work/arrow.svg"
+                width={210}
+                height={300}
+                alt="arrow"
+                className="hidden absolute top-2 left-[4.5rem] xl:block"
+                data-aos="fade-right"
+                data-aos-delay="300"
+              />
+            )}
+            <p
+              className="text-white text-left mt-4"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              {item.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
   </div>
 );
 
-// CarouselItem component
-const CarouselItem = ({ data }) => (
-  <div className="relative" data-aos="fade-up" data-aos-delay="200">
-    <WorkCard num={data.num} title={data.title} />
-    <Image
-      src="/work/arrow.svg"
-      width={210}
-      height={300}
-      alt="arrow"
-      className="hidden absolute top-2 left-[4.5rem] xl:block"
-      data-aos="fade-right"
-      data-aos-delay="300"
-    />
-    <p
-      className="text-white text-left mt-4"
-      data-aos="fade-up"
-      data-aos-delay="400"
-    >
-      {data.description}
-    </p>
-  </div>
-);
-
-// Work component
+// Main Work component
 const Work = () => {
   useEffect(() => {
     AOS.init({
@@ -56,7 +76,7 @@ const Work = () => {
     });
   }, []);
 
-  // Define data for XI and XII sections
+  // Data for XI and XII roadmaps
   const xiData = [
     {
       num: "01",
@@ -70,7 +90,7 @@ const Work = () => {
     },
     {
       num: "03",
-      title: "145 Days (1st June to 31th October)",
+      title: "145 Days (1st June to 31st October)",
       description: "Lectures, Revision, and Exams",
     },
     {
@@ -138,6 +158,7 @@ const Work = () => {
     },
   ];
 
+  // Slider settings
   const settings = {
     dots: true,
     infinite: false,
@@ -150,53 +171,19 @@ const Work = () => {
     <section className="w-full bg-rose-500 text-white bg-[url('/work/workbg.png')] bg-cover bg-no-repeat bg-center">
       <div className="flex flex-col gap-10 lg:gap-16 container mx-auto md:px-16 px-5 py-12 sm:py-20 md:py-36">
         <Slider {...settings}>
-          {/* XI Section */}
-          <div>
-            <div className="text-center">
-              <h1
-                className="uppercase block font-semibold text-3xl tracking-widest text-white"
-                data-aos="fade-up"
-              >
-                ROADMAP FOR XI
-              </h1>
-              <p
-                className="text-xl font-semibold leading-relaxed text-white mt-3"
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
-                Explore the key milestones in our two-year educational journey.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-5">
-              {xiData.map((item, index) => (
-                <CarouselItem key={index} data={item} />
-              ))}
-            </div>
-          </div>
+          {/* Display XI Roadmap */}
+          <Roadmap
+            title="ROADMAP FOR XI"
+            description="Explore the key milestones in our two-year educational journey."
+            data={xiData}
+          />
 
-          {/* XII Section */}
-          <div>
-            <div className="text-center mt-10">
-              <h1
-                className="uppercase block font-semibold text-3xl tracking-widest text-white"
-                data-aos="fade-up"
-              >
-                ROADMAP FOR XII
-              </h1>
-              <p
-                className="text-xl font-semibold leading-relaxed text-white mt-3"
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
-                Explore the key milestones in our second year of education.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-5">
-              {xiiData.map((item, index) => (
-                <CarouselItem key={index} data={item} />
-              ))}
-            </div>
-          </div>
+          {/* Display XII Roadmap */}
+          <Roadmap
+            title="ROADMAP FOR XII"
+            description="Explore the key milestones in our second year of education."
+            data={xiiData}
+          />
         </Slider>
       </div>
     </section>
