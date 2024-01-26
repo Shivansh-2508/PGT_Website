@@ -21,6 +21,10 @@ const Card = ({ imgSrc, title, content }) => {
 const Community = () => {
   return (
     <section className='container mx-auto px-16 lg:px-32'>
+      <div>
+        <span className='service-name text-center '>Perperation</span>
+        <h2 className='title text-center pb-11 '>METHODOLOGY</h2>
+      </div>
       <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-2 lg:gap-16 text-center mx-auto'>
         <Card
           imgSrc='/community/1.svg'

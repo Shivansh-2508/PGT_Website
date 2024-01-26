@@ -40,7 +40,7 @@ export default function Home() {
         {/* <Services /> */}
         {/* <CoreFeatures /> */}
         <Work />
-        <Time />
+        {/* <Time /> */}
         <Community />
 
         <Pricing />

@@ -59,18 +59,20 @@ const Navbar = () => {
               onClick={() => setToggleMenu(false)}>
               <CloseOutlinedIcon />
             </button>
-            {["home", "features", "pricing", "testimonial"].map((link) => (
-              <li
-                key={link}
-                className={`${
-                  selectedItem === link ? "text-rose-600" : ""
-                } capitalize border-b py-4 md:border-none md:py-0 hover:text-rose-600`}
-                onClick={() => setSelectedItem(link)}>
-                <Link to={`${link}`} smooth={true} offset={50} duration={50}>
-                  {link}
-                </Link>
-              </li>
-            ))}
+            {["home", "features", "pricing", "testimonial", "Maps"].map(
+              (link) => (
+                <li
+                  key={link}
+                  className={`${
+                    selectedItem === link ? "text-rose-600" : ""
+                  } capitalize border-b py-4 md:border-none md:py-0 hover:text-rose-600`}
+                  onClick={() => setSelectedItem(link)}>
+                  <Link to={`${link}`} smooth={true} offset={50} duration={50}>
+                    {link}
+                  </Link>
+                </li>
+              )
+            )}
             <div className='md:hidden mx-auto absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-3'>
               <Link href='#' target='_blank'>
                 <FacebookOutlinedIcon className='cursor-pointer hover:text-rose-600 text-xl' />
