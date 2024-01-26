@@ -3,6 +3,7 @@ import Community from "@/components/Community";
 import CoreFeatures from "@/components/CoreFeatures";
 import Features from "@/components/Features";
 import HeroSection from "@/components/HeroSection";
+import Maps from "@/components/Maps";
 import Pricing from "@/components/Pricing";
 import QualityFeatures from "@/components/QualityFeatures";
 import Services from "@/components/Services";
@@ -13,7 +14,7 @@ import Work from "@/components/Work";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-16 md:gap-32">
+    <div className='flex flex-col gap-16 md:gap-32'>
       <HeroSection />
       <QualityFeatures />
       <Features />
@@ -26,6 +27,7 @@ export default function Home() {
       <Testimonials />
       <Subscribe />
       <Community />
+      <Maps />
     </div>
   );
 }
