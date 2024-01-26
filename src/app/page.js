@@ -11,23 +11,26 @@ import Subscribe from "@/components/Subscribe";
 import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import Work from "@/components/Work";
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className='flex flex-col gap-16 md:gap-32'>
-      <HeroSection />
-      <QualityFeatures />
-      <Features />
-      <Services />
+    <>
+      <div className='flex flex-col gap-16 md:gap-32'>
+        <HeroSection />
+        <QualityFeatures />
+        <Features />
+        <Services />
 
-      <CoreFeatures />
-      <Work />
-      <Pricing />
-      <Team />
-      <Testimonials />
-      <Subscribe />
-      <Community />
-      <Maps />
-    </div>
+        <CoreFeatures />
+        <Work />
+        <Pricing />
+        <Team />
+        <Testimonials />
+        <Subscribe />
+        <Community />
+        <Maps />
+      </div>
+    </>
   );
 }
