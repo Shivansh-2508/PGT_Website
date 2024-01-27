@@ -27,26 +27,10 @@ const Features = () => {
       <h2 className='title text-center'>Meet the Toppers</h2>
 
       <Slider {...sliderSettings} className='mt-10 md:mt-20'>
-        <FeatureProduct
-          imgSrc='/features/1.png'
-          title='Fast Performance'
-          desc='Get your blood tests delivered at home collect a sample from the your blood tests.'
-        />
-        <FeatureProduct
-          imgSrc='/features/2.png'
-          title='Partnership deal'
-          desc='Get your blood tests delivered at home collect a sample from the your blood tests.'
-        />
-        <FeatureProduct
-          imgSrc='/features/1.png'
-          title='Pro Subscription'
-          desc='Get your blood tests delivered at home collect a sample from the your blood tests.'
-        />
-        <FeatureProduct
-          imgSrc='/features/2.png'
-          title='Customer Support'
-          desc='Get your blood tests delivered at home collect a sample from the your blood tests.'
-        />
+        <FeatureProduct imgSrc='/features/1.png' title='' desc='' />
+        <FeatureProduct imgSrc='/features/2.png' title='' desc='' />
+        <FeatureProduct imgSrc='/features/1.png' title='' desc='' />
+        <FeatureProduct imgSrc='/features/2.png' title='' desc='' />
         {/* Add more FeatureProduct components as needed */}
       </Slider>
     </section>

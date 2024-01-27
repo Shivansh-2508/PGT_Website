@@ -37,7 +37,7 @@ const HeroSection = () => {
       className='text-center flex flex-col gap-10 sm:gap-20 items-center justify-center h-full mt-28 sm:mt-32 md:mt-44'
       id='home'>
       <div className='md:w-2/3 lg:w-1/2 container px-5 md:px-16 mx-auto'>
-        <h1 className='capitalize flex flex-col gap-2 md:gap-5 text-3xl sm:text-4xl md:text-[3.2rem] 2xl:text-6xl font-bold mt-32'>
+        <h1 className='capitalize flex flex-col gap-2 md:gap-5 text-3xl sm:text-4xl md:text-[3.2rem] 2xl:text-6xl font-bold sm:mt-32 md:mt-0 xl:mt-0'>
           <>Pinnacle Group Tutions </>
         </h1>
         <p className='text-lg leading-normal sm:leading-loose my-4 md:my-6'>
