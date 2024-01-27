@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <>
-      <div className='flex flex-col gap-16 md:gap-32'>
+      <div className='flex flex-col gap-16 md:gap-32 '>
         <Head></Head>
         <HeroSection />
         <QualityFeatures />
@@ -43,7 +43,7 @@ export default function Home() {
 
         <Pricing />
         <Team />
-        
+
         <Subscribe />
         <Maps />
         <Testimonials />

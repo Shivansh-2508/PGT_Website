@@ -39,7 +39,7 @@ const Navbar = () => {
       className={`${
         theme === "dark" ? "bg-[#121212]" : "bg-white text-black"
       } w-full z-50 fixed top-0 left-0 py-4 mb-10`}>
-      <div className='container px-5 md:px-16 flex items-center justify-between mx-auto'>
+      <div className='container px-5 md:px-16 flex items-center justify-between mx-auto '>
         <Link to={"/"} smooth={true} offset={0} duration={1000}>
           <h2 className='text-3xl'>
             {theme === "dark" ? (
@@ -117,7 +117,7 @@ const Navbar = () => {
           <button
             aria-label='menu'
             className={`${
-              theme === "dark" ? "text-white" : "text-black"
+              theme === "dark" ? "text-white pr-4" : "text-black pr-4"
             } md:hidden`}
             onClick={() => setToggleMenu(true)}>
             <MenuIcon />
