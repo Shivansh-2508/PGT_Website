@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-// TODO :- Make add the content
-
 const CoreFeatures = () => {
   return (
     <section className='container mx-auto px-4 md:px-16 flex flex-col lg:flex-row items-center lg:gap-20 gap-14'>

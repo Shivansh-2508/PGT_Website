@@ -4,10 +4,10 @@ import Image from "next/image";
 
 const FeatureProduct = ({ imgSrc, title, desc }) => {
   return (
-    <div className='flex flex-col items-center'>
-      <Image src={imgSrc} width={200} height={200} alt='features' />
-      <h3 className='text-xl font-semibold my-2'>{title}</h3>
-      <p className='text-sm'>{desc}</p>
+    <div className="flex flex-col items-center">
+      <Image src={imgSrc} width={200} height={200} alt="features" />
+      <h3 className="text-xl font-semibold my-2">{title}</h3>
+      <p className="text-sm">{desc}</p>
     </div>
   );
 };
@@ -22,15 +22,19 @@ const Features = () => {
   };
 
   return (
-    <section className='container mx-auto px-5 md:px-16' id='features'>
-      <span className='service-name text-center'>WHY US</span>
-      <h2 className='title text-center'>Meet the Toppers</h2>
+    <section className="container mx-auto px-5 md:px-16" id="features">
+      <span className="service-name text-center" style={{ fontSize: "28px" }}>
+        WHY US
+      </span>
+      <h2 className="title text-center" style={{ fontSize: "18px" }}>
+        Meet the Toppers
+      </h2>
 
-      <Slider {...sliderSettings} className='mt-10 md:mt-20'>
-        <FeatureProduct imgSrc='/features/1.png' title='' desc='' />
-        <FeatureProduct imgSrc='/features/2.png' title='' desc='' />
-        <FeatureProduct imgSrc='/features/1.png' title='' desc='' />
-        <FeatureProduct imgSrc='/features/2.png' title='' desc='' />
+      <Slider {...sliderSettings} className="mt-10 md:mt-20">
+        <FeatureProduct imgSrc="/features/1.png" title="" desc="" />
+        <FeatureProduct imgSrc="/features/2.png" title="" desc="" />
+        <FeatureProduct imgSrc="/features/1.png" title="" desc="" />
+        <FeatureProduct imgSrc="/features/2.png" title="" desc="" />
         {/* Add more FeatureProduct components as needed */}
       </Slider>
     </section>

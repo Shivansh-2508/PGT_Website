@@ -23,8 +23,7 @@ const HeroSection = () => {
       },
     ],
   };
-
-  // Array of image information
+  
   const images = [
     { src: "/smp3.jpg", width: 500, height: 300, alt: "carousel Image 3" },
     { src: "/smp1.png", width: 600, height: 300, alt: "carousel Image 1" },

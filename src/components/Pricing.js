@@ -49,22 +49,16 @@ const Pricing = () => {
       data-aos="fade-up"
     >
       <div>
-        <span className="service-name text-center ">PRICING PLAN</span>
+        <span className="service-name text-center" style={{ fontSize: "26px" }}>
+          PRICING PLAN
+        </span>
       </div>
 
-      <div className="relative transition-all flex gap-1 mx-auto w-fit bg-slate-100 p-2 rounded-full">
-        {/* <div
-          className={`${
-            plan === "Monthly Plan" ? "left-2" : "left-[150px] w-[128px]"
-          } transition-all duration-500 absolute top-[.37rem] h-[55px] w-[138px] rounded-full bg-rose-600`}></div> */}
-        {/* <button
-          onClick={() => setPlan("Monthly Plan")}
-          className={`
-          ${plan === "Monthly Plan" ? "text-white" : "text-rose-600"}
-          z-[1] capitalize text-base hover:border-2 border-2 border-transparent py-3 px-5 hover:border-rose-600 rounded-full`}>
-          Monthly Plan
-        </button> */}
-        <div className="capitalize text-sm sm:text-base   font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 rounded-full">
+      <div className="relative transition-all flex gap-1 mx-auto w-fit bg-slate-50 p-1 rounded-full">
+        <div
+          className="capitalize text-sm sm:text-base font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 rounded-full"
+          style={{ fontSize: "18px" }}
+        >
           Annual Plan
         </div>
       </div>
@@ -85,9 +79,6 @@ const Pricing = () => {
             trail=""
           />
           <div className="relative">
-            {/* <span className='absolute -top-1 left-10 bg-rose-600 text-white px-2 py-1 rounded-md'>
-              Suggested
-      </span>*/}
             <PricingCard
               name="Boards + HSC"
               title="For pro level developers"
@@ -113,9 +104,6 @@ const Pricing = () => {
             trail=""
           />
           <div className="relative">
-            {/*} <span className='absolute -top-1 left-10 bg-rose-600 text-white px-2 py-1 rounded-md'>
-              Suggested
-      </span>*/}
             <PricingCard
               name="Boards + HSC"
               title="For pro level developers"

@@ -13,7 +13,6 @@ const Card = ({ title, desc }) => {
       <h2 className="text-lg font-bold mb-2">{title}</h2>
       <p className="leading-loose">{desc}</p>
       <div className="flex items-center gap-4 mt-5">
-        {/* <Image src={imgSrc} width={50} height={50} alt='testimonials' /> */}
         <div>
           <h3 className="font-semibold"></h3>
           <Link href="#" target="_blank" className="text-rose-600 font-[500]">
@@ -38,8 +37,15 @@ const Testimonials = () => {
       id="testimonial"
     >
       <div>
-        <span className="service-name text-center ">TESTIMONIAL</span>
-        <h2 className="title text-center ">Meet Client Satisfaction</h2>
+        <span
+          className="service-name text-center "
+          style={{ fontSize: "26px" }}
+        >
+          TESTIMONIAL
+        </span>
+        <h2 className="title text-center " style={{ fontSize: "18px" }}>
+          Students Reviews
+        </h2>
       </div>
       {reviews && reviews.length > 0 && (
         <Carousel {...carouselParams}>
