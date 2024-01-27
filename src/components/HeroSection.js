@@ -25,12 +25,12 @@ const HeroSection = () => {
   };
 
   const images = [
-    { src: "/smp3.png", width: 500, height: 300, alt: "carousel Image 3" },
-    { src: "/smp6.png", width: 600, height: 300, alt: "carousel Image 6" },
-    { src: "/smp2.png", width: 600, height: 300, alt: "carousel Image 2" },
-    { src: "/smp.png", width: 600, height: 300, alt: "carousel Image 0" },
-    { src: "/smppp.png", width: 600, height: 300, alt: "carousel Image 5" },
-    { src: "/smp7.png", width: 600, height: 300, alt: "carousel Image 7" },
+    { src: "/smp3.png", width: 200, height: 200, alt: "carousel Image 3" },
+    { src: "/smp6.png", width: 600, height: 200, alt: "carousel Image 6" },
+    { src: "/smp2.png", width: 600, height: 200, alt: "carousel Image 2" },
+    { src: "/smp.png", width: 200, height: 200, alt: "carousel Image 0" },
+    { src: "/smppp.png", width: 300, height: 200, alt: "carousel Image 5" },
+    { src: "/smp7.png", width: 600, height: 200, alt: "carousel Image 7" },
   ];
 
   return (
