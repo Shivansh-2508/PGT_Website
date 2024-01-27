@@ -11,7 +11,6 @@ import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import { Link } from "react-scroll";
-
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [selectedItem, setSelectedItem] = useState("/");
@@ -60,26 +59,21 @@ const Navbar = () => {
             >
               <CloseOutlinedIcon />
             </button>
-            {[
-              "home",
-              "features",
-              "pricing",
-              "Connect",
-              "Maps",
-              "testimonial",
-            ].map((link) => (
-              <li
-                key={link}
-                className={`${
-                  selectedItem === link ? "text-rose-600" : ""
-                } capitalize border-b py-4 md:border-none md:py-0 hover:text-rose-600 cursor-pointer`} // Add cursor-pointer class
-                onClick={() => setSelectedItem(link)}
-              >
-                <Link to={`${link}`} smooth={true} offset={0} duration={1000}>
-                  {link}
-                </Link>
-              </li>
-            ))}
+            {["home", "features", "pricing", "Maps", "testimonial"].map(
+              (link) => (
+                <li
+                  key={link}
+                  className={`${
+                    selectedItem === link ? "text-rose-600" : ""
+                  } capitalize border-b py-4 md:border-none md:py-0 hover:text-rose-600 cursor-pointer`}
+                  onClick={() => setSelectedItem(link)}
+                >
+                  <Link to={`${link}`} smooth={true} offset={0} duration={1000}>
+                    {link}
+                  </Link>
+                </li>
+              )
+            )}
 
             <div className="md:hidden mx-auto absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-3">
               <Link href="#" target="_blank">
@@ -97,8 +91,13 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-4 md:gap-2 lg:gap-4">
-          <button className="capitalize text-sm sm:text-base border-2 hover:border-2 font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 hover:border-rose-600 hover:bg-rose-600 hover:text-white rounded-full">
-            <Link href={"#pricing"}>Get Started</Link>
+          <button
+            className="capitalize text-sm sm:text-base border-2 hover:border-2 font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 hover:border-rose-600 hover:bg-rose-600 hover:text-white rounded-full"
+            onClick={() => setSelectedItem(Connect)}
+          >
+            <Link to="Connect">
+              <a>Contact Us</a>
+            </Link>
           </button>
           <button>
             {theme === "dark" ? (
