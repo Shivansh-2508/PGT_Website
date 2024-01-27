@@ -8,56 +8,51 @@ import "aos/dist/aos.css";
 // Roadmap component to display XI and XII roadmaps
 const Roadmap = ({ title, description, data }) => (
   <div>
-    <div className="text-center">
+    <div className='text-center'>
       <h1
-        className="uppercase block font-semibold text-3xl tracking-widest text-white"
-        data-aos="fade-up"
-      >
+        className='uppercase block font-semibold text-3xl tracking-widest text-white'
+        data-aos='fade-up'>
         {title}
       </h1>
       <p
-        className="text-xl font-semibold leading-relaxed text-white mt-3"
-        data-aos="fade-up"
-        data-aos-delay="100"
-      >
+        className='text-xl font-semibold leading-relaxed text-white mt-3'
+        data-aos='fade-up'
+        data-aos-delay='100'>
         {description}
       </p>
     </div>
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-5">
+    <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-5'>
       {data.map((item, index) => (
         <div key={index}>
-          <div className="relative" data-aos="fade-up" data-aos-delay="200">
+          <div className='relative' data-aos='fade-up' data-aos-delay='200'>
             <div
-              className="w-full flex flex-col gap-5 text-center md:text-left"
-              data-aos="fade-up"
-            >
-              <span className="md:mx-0 mx-auto text-3xl w-fit font-bold text-blue-800 bg-white rounded-full py-4 px-4">
+              className='w-full flex flex-col gap-5 text-center md:text-left'
+              data-aos='fade-up'>
+              <span className='md:mx-0 mx-auto text-3xl w-fit font-bold text-blue-800 bg-white rounded-full py-4 px-4'>
                 {item.num}
               </span>
               <h2
-                className="text-xl font-semibold leading-relaxed text-white"
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
+                className='text-xl font-semibold leading-relaxed text-white'
+                data-aos='fade-up'
+                data-aos-delay='100'>
                 {item.title}
               </h2>
             </div>
             {index < data.length - 1 && (
               <Image
-                src="/work/arrow.svg"
+                src='/work/arrow.svg'
                 width={210}
                 height={300}
-                alt="arrow"
-                className="hidden absolute top-2 left-[4.5rem] xl:block"
-                data-aos="fade-right"
-                data-aos-delay="300"
+                alt='arrow'
+                className='hidden absolute top-2 left-[4.5rem] xl:block '
+                data-aos='fade-right'
+                data-aos-delay='300'
               />
             )}
             <p
-              className="text-white text-left mt-4"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
+              className='text-white text-left mt-4'
+              data-aos='fade-up'
+              data-aos-delay='400'>
               {item.description}
             </p>
           </div>
@@ -165,23 +160,26 @@ const Work = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    swipeToSlide: true,
+    nextArrow: false,
+    prevArrow: false,
   };
 
   return (
-    <section className="w-full bg-rose-500 text-white bg-[url('/work/workbg.png')] bg-cover bg-no-repeat bg-center">
-      <div className="flex flex-col gap-10 lg:gap-16 container mx-auto md:px-16 px-5 py-12 sm:py-20 md:py-36">
-        <Slider {...settings}>
+    <section className="w-full bg-rose-500 text-white bg-[url('/work/workbg.png')] bg-cover bg-no-repeat bg-center m">
+      <div className='flex flex-col gap-10 lg:gap-16 container mx-auto md:px-16 px-5 py-12 sm:py-20 md:py-36'>
+        <Slider {...settings} className='mx-4'>
           {/* Display XI Roadmap */}
           <Roadmap
-            title="ROADMAP FOR XI"
-            description="Explore the key milestones in our two-year educational journey."
+            title='ROADMAP FOR XI'
+            description='Explore the key milestones in our two-year educational journey.'
             data={xiData}
           />
 
           {/* Display XII Roadmap */}
           <Roadmap
-            title="ROADMAP FOR XII"
-            description="Explore the key milestones in our second year of education."
+            title='ROADMAP FOR XII'
+            description='Explore the key milestones in our second year of education.'
             data={xiiData}
           />
         </Slider>
