@@ -67,13 +67,13 @@ const Pricing = () => {
         <Carousel {...carouselParams}>
           <PricingCard
             name="Boards + JEE/NEET"
-            title="For Small teams or office"
+            title="Comprehensive Exam Preparation"
             price="0"
             btnText="View Details"
           />
           <PricingCard
             name="BOARDS"
-            title="For Enterprise business"
+            title="Core Board Exam Preparation"
             price="15"
             btnText="View Details"
             trail=""
@@ -81,7 +81,7 @@ const Pricing = () => {
           <div className="relative">
             <PricingCard
               name="Boards + HSC"
-              title="For pro level developers"
+              title="Complete Maharashtra State Board Support"
               price="24"
               btnText="View Details"
               trail=""
