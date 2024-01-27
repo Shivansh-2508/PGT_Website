@@ -16,6 +16,7 @@ import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import Work from "@/components/Work";
 import Head from "next/head";
+import { Toaster } from "react-hot-toast";
 
 export default function Home() {
   useEffect(() => {
@@ -31,7 +32,10 @@ export default function Home() {
 
   return (
     <>
-      <div className='flex flex-col gap-16 md:gap-32'>
+      <div className='flex flex-col gap-16 md:gap-32 '>
+        <div>
+          <Toaster />
+        </div>
         <Head></Head>
         <HeroSection />
         <QualityFeatures />
@@ -43,7 +47,7 @@ export default function Home() {
 
         <Pricing />
         <Team />
-        
+
         <Subscribe />
         <Maps />
         <Testimonials />

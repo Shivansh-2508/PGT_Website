@@ -11,6 +11,10 @@ import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import { Link } from "react-scroll";
+import Image1 from "../../public/dark_logo.svg";
+import Image2 from "../../public/light_logo.svg";
+import Image from "next/image";
+
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [selectedItem, setSelectedItem] = useState("/");
@@ -36,10 +40,14 @@ const Navbar = () => {
         theme === "dark" ? "bg-[#121212]" : "bg-white text-black"
       } w-full z-50 fixed top-0 left-0 py-4 mb-10`}
     >
-      <div className="container px-5 md:px-16 flex items-center justify-between mx-auto">
-        <Link to={"/"} smooth={true} offset={50} duration={50}>
+      <div className="container px-5 md:px-16 flex items-center justify-between mx-auto ">
+        <Link to={"/"} smooth={true} offset={0} duration={1000}>
           <h2 className="text-3xl">
-            <span className="text-rose-600">P</span>GT.
+            {theme === "dark" ? (
+              <Image src={Image1} alt="Dark Image" width={100} />
+            ) : (
+              <Image src={Image2} alt="light" width={100} />
+            )}
           </h2>
         </Link>
 
@@ -99,6 +107,7 @@ const Navbar = () => {
               <a>Contact Us</a>
             </Link>
           </button>
+
           <button>
             {theme === "dark" ? (
               <LightModeRoundedIcon
@@ -112,7 +121,7 @@ const Navbar = () => {
           <button
             aria-label="menu"
             className={`${
-              theme === "dark" ? "text-white" : "text-black"
+              theme === "dark" ? "text-white pr-4" : "text-black pr-4"
             } md:hidden`}
             onClick={() => setToggleMenu(true)}
           >
