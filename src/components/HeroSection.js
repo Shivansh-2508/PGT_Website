@@ -31,6 +31,7 @@ const HeroSection = () => {
     { src: "/smp.png", width: 200, height: 200, alt: "carousel Image 0" },
     { src: "/smppp.png", width: 300, height: 200, alt: "carousel Image 5" },
     { src: "/smp7.png", width: 600, height: 200, alt: "carousel Image 7" },
+    { src: "/smp8.png", width: 800, height: 900, alt: "carousel Image 8" },
   ];
 
   return (
