@@ -1,12 +1,17 @@
-<div align="center">PINNACLE GROUP TUITIONS WEBSITE</div>
-<br> 
+<div align="center">
+  <h1>PINNACLE GROUP TUITIONS WEBSITE</h1>
+</div>
+<br>
 
-Welcome to the Pinnacle Group Tuitions website repository. This Next.js project is meticulously crafted to provide a seamless online experience for students seeking tuition classes. Leveraging the power of Next.js with a RESTful API, this website integrates cutting-edge features such as Google Reviews, Google Maps, and Email.js for a comprehensive and user-friendly platform. Various React libraries have been thoughtfully employed to elevate the overall functionality and aesthetic appeal..
+Welcome to the Pinnacle Group Tuitions website repository. This Next.js project is meticulously crafted to provide a seamless online experience for students seeking tuition classes. Leveraging the power of Next.js with a RESTful API, this website integrates cutting-edge features such as Google Reviews, Google Maps, and Email.js for a comprehensive and user-friendly platform. Various React libraries have been thoughtfully employed to elevate the overall functionality and aesthetic appeal.
 
-![image](https://github.com/PrabirKalwani/PGT_Website/assets/140951916/390b3025-3621-4d27-ac9a-7763cee804dd)
+![Website Preview](https://github.com/PrabirKalwani/PGT_Website/assets/140951916/390b3025-3621-4d27-ac9a-7763cee804dd)
 
-Getting Started
+## Getting Started
+
 To set up and run the development server locally, follow these steps:
+
+```bash
 npm install
 npm run dev
 # or
@@ -16,6 +21,7 @@ yarn dev
 pnpm install
 pnpm dev
 
+
 Open http://localhost:3000 in your browser to view the result. The main page can be modified by editing the app/page.js file, and changes will be automatically reflected in the browser.
 This project leverages next/font to optimize and load Inter, a custom Google Font, enhancing the overall design and typography.
 
@@ -24,6 +30,10 @@ Google Reviews: Integration of Google Reviews to showcase user feedback and test
 Google Maps: Inclusion of Google Maps for location-based information and easy navigation.
 Email.js: Utilization of Email.js for seamless email communication and contact functionality.
 React Libraries: Various React libraries have been incorporated to enhance specific features and components.
+
+Mobile View
+![WhatsApp Image 2024-01-28 at 10 08 29_6335183b](https://github.com/PrabirKalwani/PGT_Website/assets/140951916/708ec4ee-ee29-4442-9a8a-2c3729253de4)
+
 
 Learn More
 To delve deeper into the project and Next.js, refer to the following resources:
