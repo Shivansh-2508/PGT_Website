@@ -1,4 +1,5 @@
 Pinnacle Group Tuitions Website
+
 Welcome to the Pinnacle Group Tuitions website repository. This Next.js project is meticulously crafted to provide a seamless online experience for students seeking tuition classes. Leveraging the power of Next.js with a RESTful API, this website integrates cutting-edge features such as Google Reviews, Google Maps, and Email.js for a comprehensive and user-friendly platform. Various React libraries have been thoughtfully employed to elevate the overall functionality and aesthetic appeal..
 
 ![image](https://github.com/PrabirKalwani/PGT_Website/assets/140951916/390b3025-3621-4d27-ac9a-7763cee804dd)
