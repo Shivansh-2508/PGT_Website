@@ -1,21 +1,22 @@
-<svg width="130" height="129" viewBox="0 0 130 129" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g filter="url(#filter0_d_3_67)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M64.5145 8C88.5456 8 108.027 27.4749 108.027 51.5C108.027 75.5235 88.5456 95 64.5145 95C40.4819 95 21 75.5235 21 51.5C21 27.4749 40.4819 8 64.5145 8Z" fill="#FF4361"/>
+<svg width="109" height="120" viewBox="0 0 109 120" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g filter="url(#filter0_d_18_2)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M54.1201 19.8857C72.3108 19.8857 87.0556 34.631 87.0556 52.8214C87.0556 71.0107 72.3108 85.7572 54.1201 85.7572C35.9307 85.7572 21.1846 71.0107 21.1846 52.8214C21.1846 34.631 35.9307 19.8857 54.1201 19.8857Z" fill="#FF4361"/>
 </g>
-<rect x="45" y="32" width="40" height="40" fill="url(#pattern0)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M47.2857 0H59.7143C80.3071 0 97 16.6916 97 37.2857V49.7143C97 70.3059 80.3058 87 59.7143 87H47.287C26.6942 87 10 70.3059 10 49.7143V37.2857C10 16.6928 26.6942 0 47.2857 0Z" fill="#FF4361"/>
+<rect x="33" y="24" width="39.9874" height="40" fill="url(#pattern0)"/>
 <defs>
-<filter id="filter0_d_3_67" x="0" y="0" width="129.027" height="129" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_18_2" x="0.18457" y="11.8857" width="107.871" height="107.871" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="13"/>
 <feGaussianBlur stdDeviation="10.5"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.992157 0 0 0 0 0.345098 0 0 0 0 0.447059 0 0 0 0.3 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_67"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3_67" result="shape"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.898039 0 0 0 0 0.117647 0 0 0 0 0.435294 0 0 0 0.3 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_18_2"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_18_2" result="shape"/>
 </filter>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_3_67" transform="scale(0.0111111)"/>
+<use xlink:href="#image0_18_2" transform="scale(0.0111111 0.0111076)"/>
 </pattern>
-<image id="image0_3_67" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB50lEQVR4nO3csUoEQRCE4TIRfHI1FUFf8DTTyLhkwUguGaq7r3u2Ptjk4Gpmfy4+wMzMzMzMbBck70k+k/zg+VxIPh0NKkIfB53dU0XoM/6S//usCG0kHbqIQ+8eWvlu5x1lX5L9Ymi2o+xLpgRC0I6yL5kSCEE7yr5kSiAE7Sj7kimBELSj7EumBELQjrIvmRIIQTvKvmRKIATtKPuS7MtxyA6yrYTtGChqB9koQNB+hx1kWwnbMVDUDrJRgKD9DjvIthK2Y6CoHWSjAEH7HXaQbSVsx0BRO8hGAYL2O+wgW+eXz9hR9iXKwQx6gcodZV8yJRCCdpR9yZRACNpR9iVTAiFoR9mXTAmEoB1lXzIlEIJ2lH3JlEAI2lH2JVMCIWhH2ZdkX45DdpBtJWzHQFE7yEYBgvY77CDbStiOgaJ2kI0CBO132EG2lbAdA0XtIBsFCNrvsINsK2E7BoraQTYKELTfYQfZVsLuDA5dw6GLOHSNi0PXeHTojf5G4qr0g8/GoYs4dBGHLuLQRRy6iEMXcegiDl3EoYs4dBGHLuLQRRy6iEMXcegiDl3EoYs4dBGHLuLQRUh+X4n9VXX+aZB8vRL65db32g7JB5LvJH/+nrfjs1vfa1sk747n1vcwMzMzMzNs6xdZvWl0Foy7JAAAAABJRU5ErkJggg=="/>
+<image id="image0_18_2" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB50lEQVR4nO3csUoEQRCE4TIRfHI1FUFf8DTTyLhkwUguGaq7r3u2Ptjk4Gpmfy4+wMzMzMzMbBck70k+k/zg+VxIPh0NKkIfB53dU0XoM/6S//usCG0kHbqIQ+8eWvlu5x1lX5L9Ymi2o+xLpgRC0I6yL5kSCEE7yr5kSiAE7Sj7kimBELSj7EumBELQjrIvmRIIQTvKvmRKIATtKPuS7MtxyA6yrYTtGChqB9koQNB+hx1kWwnbMVDUDrJRgKD9DjvIthK2Y6CoHWSjAEH7HXaQbSVsx0BRO8hGAYL2O+wgW+eXz9hR9iXKwQx6gcodZV8yJRCCdpR9yZRACNpR9iVTAiFoR9mXTAmEoB1lXzIlEIJ2lH3JlEAI2lH2JVMCIWhH2ZdkX45DdpBtJWzHQFE7yEYBgvY77CDbStiOgaJ2kI0CBO132EG2lbAdA0XtIBsFCNrvsINsK2E7BoraQTYKELTfYQfZVsLuDA5dw6GLOHSNi0PXeHTojf5G4qr0g8/GoYs4dBGHLuLQRRy6iEMXcegiDl3EoYs4dBGHLuLQRRy6iEMXcegiDl3EoYs4dBGHLuLQRUh+X4n9VXX+aZB8vRL65db32g7JB5LvJH/+nrfjs1vfa1sk747n1vcwMzMzMzNs6xdZvWl0Foy7JAAAAABJRU5ErkJggg=="/>
 </defs>
 </svg>
