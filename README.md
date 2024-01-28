@@ -21,7 +21,7 @@ yarn dev
 pnpm install
 pnpm dev
 
-
+```
 Open http://localhost:3000 in your browser to view the result. The main page can be modified by editing the app/page.js file, and changes will be automatically reflected in the browser.
 This project leverages next/font to optimize and load Inter, a custom Google Font, enhancing the overall design and typography.
 
