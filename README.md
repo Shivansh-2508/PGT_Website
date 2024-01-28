@@ -25,14 +25,17 @@ pnpm dev
 Open http://localhost:3000 in your browser to view the result. The main page can be modified by editing the app/page.js file, and changes will be automatically reflected in the browser.
 This project leverages next/font to optimize and load Inter, a custom Google Font, enhancing the overall design and typography.
 
-Features
+<h3> Features </h3>
+<br>
 Google Reviews: Integration of Google Reviews to showcase user feedback and testimonials.
 Google Maps: Inclusion of Google Maps for location-based information and easy navigation.
 Email.js: Utilization of Email.js for seamless email communication and contact functionality.
 React Libraries: Various React libraries have been incorporated to enhance specific features and components.
+Dark and Light Mode: Experience our website in both Dark and Light modes, providing a personalized and comfortable viewing experience for users.
+Responsive: Our website is designed to be fully responsive, ensuring a consistent and optimal experience across a variety of devices, from desktops to tablets and mobile phones.
 
 <div align="center">
-  <h1>PINNACLE GROUP TUITIONS WEBSITE</h1>
+  <h3>Mobile View </h3>
 </div>
 <br> 
 
