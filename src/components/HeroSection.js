@@ -26,12 +26,12 @@ const HeroSection = () => {
 
   const images = [
     { src: "/smp3.png", width: 200, height: 200, alt: "carousel Image 3" },
-    { src: "/smp6.png", width: 600, height: 200, alt: "carousel Image 6" },
-    { src: "/smp2.png", width: 600, height: 200, alt: "carousel Image 2" },
+    { src: "/smp6.png", width: 600, height: 600, alt: "carousel Image 6" },
+    { src: "/smp2.png", width: 600, height: 600, alt: "carousel Image 2" },
     { src: "/smp.png", width: 200, height: 200, alt: "carousel Image 0" },
-    { src: "/smppp.png", width: 300, height: 200, alt: "carousel Image 5" },
-    { src: "/smp7.png", width: 600, height: 200, alt: "carousel Image 7" },
-    { src: "/smp8.png", width: 800, height: 900, alt: "carousel Image 8" },
+    { src: "/smppp.png", width: 300, height: 300, alt: "carousel Image 5" },
+    { src: "/smp7.png", width: 600, height: 600, alt: "carousel Image 7" },
+    { src: "/smp8.png", width: 800, height: 800, alt: "carousel Image 8" },
   ];
 
   return (
@@ -51,7 +51,7 @@ const HeroSection = () => {
 
       <Slider {...sliderSettings} className="w-full relative">
         {images.map((image, index) => (
-          <div key={index} className="relative">
+          <div key={index} className="relative h-48 md:h-60 lg:h-80">
             <Image {...image} className="object-cover w-full h-full" />
           </div>
         ))}
