@@ -31,7 +31,11 @@ Google Maps: Inclusion of Google Maps for location-based information and easy na
 Email.js: Utilization of Email.js for seamless email communication and contact functionality.
 React Libraries: Various React libraries have been incorporated to enhance specific features and components.
 
-Mobile View
+<div align="center">
+  <h1>PINNACLE GROUP TUITIONS WEBSITE</h1>
+</div>
+<br> 
+
 ![WhatsApp Image 2024-01-28 at 10 08 29_6335183b](https://github.com/PrabirKalwani/PGT_Website/assets/140951916/708ec4ee-ee29-4442-9a8a-2c3729253de4)
 
 
