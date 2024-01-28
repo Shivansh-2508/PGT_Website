@@ -1,34 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Pinnacle Group Tuitions Website
+Welcome to the Pinnacle Group Tuitions website repository. This Next.js project is meticulously crafted to provide a seamless online experience for students seeking tuition classes. Leveraging the power of Next.js with a RESTful API, this website integrates cutting-edge features such as Google Reviews, Google Maps, and Email.js for a comprehensive and user-friendly platform. Various React libraries have been thoughtfully employed to elevate the overall functionality and aesthetic appeal..
 
-## Getting Started
+![image](https://github.com/PrabirKalwani/PGT_Website/assets/140951916/390b3025-3621-4d27-ac9a-7763cee804dd)
 
-First, run the development server:
-
-```bash
+Getting Started
+To set up and run the development server locally, follow these steps:
+npm install
 npm run dev
 # or
+yarn install
 yarn dev
 # or
+pnpm install
 pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser to view the result. The main page can be modified by editing the app/page.js file, and changes will be automatically reflected in the browser.
+This project leverages next/font to optimize and load Inter, a custom Google Font, enhancing the overall design and typography.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Features
+Google Reviews: Integration of Google Reviews to showcase user feedback and testimonials.
+Google Maps: Inclusion of Google Maps for location-based information and easy navigation.
+Email.js: Utilization of Email.js for seamless email communication and contact functionality.
+React Libraries: Various React libraries have been incorporated to enhance specific features and components.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Learn More
+To delve deeper into the project and Next.js, refer to the following resources:
 
-## Learn More
+Next.js Documentation: Learn about Next.js features and API.
+Learn Next.js: An interactive Next.js tutorial to enhance your skills.
+For contributions and feedback, please check out the Next.js GitHub repository. Your input is valuable to the project's growth and improvement.
 
-To learn more about Next.js, take a look at the following resources:
+Deployment
+Effortlessly deploy your Next.js app using the Vercel Platform from the creators of Next.js. Refer to the Next.js deployment documentation for detailed deployment instructions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Visit the https://pinnacle.thedd.tech/ to explore the live version.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Thank you for being part of the journey in developing the Pinnacle Group Tuitions website! Your commitment to excellence is valued and appreciated.
