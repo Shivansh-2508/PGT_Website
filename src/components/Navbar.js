@@ -1,19 +1,15 @@
-"use client";
-
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
-import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import { Link } from "react-scroll";
 import Image1 from "../../public/dark_logo.svg";
 import Image2 from "../../public/light_logo.svg";
-import Image from "next/image";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
+import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -23,15 +19,30 @@ const Navbar = () => {
   const navbar = useRef();
 
   useEffect(() => {
-    window.onscroll = () => {
-      setMounted(true);
-      if (window.pageYOffset >= 0) {
-        navbar.current.classList.add("shadow");
-      } else {
-        navbar.current.classList.remove("shadow");
-      }
-    };
+    setMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (mounted) {
+      window.onscroll = () => {
+        if (window && window.pageYOffset >= 0) {
+          navbar.current.classList.add("shadow");
+        } else {
+          navbar.current.classList.remove("shadow");
+        }
+      };
+    }
+    return () => {
+      window.onscroll = null;
+    };
+  }, [mounted]);
+
+  useEffect(() => {
+    if (mounted) {
+      // Set dark theme as default
+      setTheme("dark");
+    }
+  }, [mounted, setTheme]);
 
   return (
     <div
@@ -90,22 +101,18 @@ const Navbar = () => {
               <Link target="_blank" href={"#"}>
                 <LinkedInIcon className="cursor-pointer hover:text-rose-600 text-xl" />
               </Link>
-
-              <Link target="_blank" href={"#"}>
-                <InstagramIcon className="cursor-pointer hover:text-rose-600 text-xl" />
-              </Link>
             </div>
           </ul>
         </div>
 
         <div className="flex items-center gap-2 sm:gap-4 md:gap-2 lg:gap-4">
           <button
-            className="capitalize text-xs sm:text-sm border-2 hover:border-2 font-semibold sm:py-2 py-1 px-2 sm:px-4 text-rose-600 border-rose-600 hover:border-rose-600 hover:bg-rose-600 hover:text-white rounded-full"
-            onClick={() => {
-              window.location.href = "https://wa.me/+919920090229";
-            }}
+            className="capitalize text-sm sm:text-base border-2 hover:border-2 font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 hover:border-rose-600 hover:bg-rose-600 hover:text-white rounded-full"
+            onClick={() => setSelectedItem(Connect)}
           >
-            Contact Us
+            <Link to="Connect">
+              <a>Contact Us</a>
+            </Link>
           </button>
 
           <button>
