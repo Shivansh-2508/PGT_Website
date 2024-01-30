@@ -1,6 +1,7 @@
 import "./globals.css";
 import { DM_Sans } from "next/font/google";
 import ThemeProvider from "@/components/ThemeProvider";
+import Image1 from "../../public/dark_logo.png";
 
 const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
@@ -11,7 +12,7 @@ export const metadata = {
   keywords:
     "JEE preparation, NEET coaching, engineering entrance exams, medical entrance exams, group tuitions in Airoli, academic excellence, personalized learning, small batch sizes, holistic development, character building, Pinnacle Group Tuitions, programming languages education, technology courses, commerce education, architecture classes, experienced educators, tailored learning experience, values-based education, contributing citizens, academic mentoring.",
   url: "https://pinnacleairoli/",
-  imageUrl: "https://pinnacleseo.s3.eu-north-1.amazonaws.com/PG.png",
+  imageUrl: Image1,
 };
 
 export default function RootLayout({ children }) {

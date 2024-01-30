@@ -46,7 +46,7 @@ export default function Home() {
         <Community />
 
         <Pricing />
-        <Team />
+        {/*<Team />*/}
 
         <Subscribe />
         <Maps />

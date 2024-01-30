@@ -2,8 +2,8 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import { Link } from "react-scroll";
-import Image1 from "../../public/dark_logo.svg";
-import Image2 from "../../public/light_logo.svg";
+import Image1 from "../../public/dark_logo.png";
+import Image2 from "../../public/dark_logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
@@ -17,23 +17,8 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const navbar = useRef();
+  const overlay = useRef();
 
-  const scrollToSection = (link) => {
-    // Scroll to the corresponding section using react-scroll
-    const element = document.getElementById(link);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-
-    // Close the mobile menu on the first click
-    if (toggleMenu) {
-      console.log("Closing menu");
-      setToggleMenu(false);
-    }
-
-    // Highlight the selected item in the menu
-    setSelectedItem(link);
-  };
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -60,6 +45,22 @@ const Navbar = () => {
     }
   }, [mounted, setTheme]);
 
+  useEffect(() => {
+    const closeMenu = () => {
+      setToggleMenu(false);
+    };
+
+    if (toggleMenu) {
+      overlay.current.addEventListener("click", closeMenu);
+    } else {
+      overlay.current.removeEventListener("click", closeMenu);
+    }
+
+    return () => {
+      overlay.current.removeEventListener("click", closeMenu);
+    };
+  }, [toggleMenu]);
+
   return (
     <div
       ref={navbar}
@@ -68,7 +69,7 @@ const Navbar = () => {
       } w-full z-50 fixed top-0 left-0 pt-1 mb-10`}>
       <div className='container px-5 md:px-16 flex items-center justify-between mx-auto '>
         <Link to={"/"} smooth={true} offset={0} duration={1000}>
-          <h2 className='text-3xl'>
+          <h2 className="text-3xl">
             {theme === "dark" ? (
               <Image src={Image1} alt='Dark Image' width={100} />
             ) : (
@@ -79,6 +80,7 @@ const Navbar = () => {
 
         <div>
           <ul
+            ref={overlay}
             className={`${toggleMenu === true ? "left-0" : "-left-full"} ${
               theme === "dark"
                 ? "bg-[#121212] text-white"
@@ -98,7 +100,8 @@ const Navbar = () => {
                   className={`${
                     selectedItem === link ? "text-rose-600" : ""
                   } capitalize border-b py-4 md:border-none md:py-0 hover:text-rose-600 cursor-pointer`}
-                  onClick={() => scrollToSection(link)}>
+                  onClick={() => setSelectedItem(link)}
+                >
                   <Link to={`${link}`} smooth={true} offset={0} duration={1000}>
                     {link}
                   </Link>
@@ -110,18 +113,19 @@ const Navbar = () => {
               <Link href='#' target='_blank'>
                 <FacebookOutlinedIcon className='cursor-pointer hover:text-rose-600 text-xl' />
               </Link>
-              <Link target='_blank' href={"#"}>
-                <LinkedInIcon className='cursor-pointer hover:text-rose-600 text-xl' />
+              <Link target="_blank" href={"#"}>
+                <LinkedInIcon className="cursor-pointer hover:text-rose-600 text-xl" />
               </Link>
             </div>
           </ul>
         </div>
 
-        <div className='flex items-center gap-2 sm:gap-4 md:gap-2 lg:gap-4'>
+        <div className="flex items-center gap-2 sm:gap-4 md:gap-2 lg:gap-4">
           <button
-            className='capitalize text-sm sm:text-base border-2 hover:border-2 font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 hover:border-rose-600 hover:bg-rose-600 hover:text-white rounded-full'
-            onClick={() => setSelectedItem(Connect)}>
-            <Link to='Connect'>
+            className="capitalize text-sm sm:text-base border-2 hover:border-2 font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 hover:border-rose-600 hover:bg-rose-600 hover:text-white rounded-full"
+            onClick={() => setSelectedItem(Connect)}
+          >
+            <Link to="Connect">
               <a>Contact Us</a>
             </Link>
           </button>
