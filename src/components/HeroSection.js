@@ -35,16 +35,19 @@ const HeroSection = () => {
 
   return (
     <section
-      className="text-center flex flex-col gap-5 sm:gap-5 items-center justify-center mt-10 sm:mt-16 md:mt-22 relative z-10" // Adjusted z-index and added relative positioning
+      className="text-center flex flex-col gap-5 sm:gap-5 items-center justify-center sm:mt-16 md:mt-8 lg:mt-12 relative z-10"
       id="home"
     >
       <div className="md:w-2/3 lg:w-1/2 container px-5 md:px-16 mx-auto">
-      <h1 className="capitalize flex flex-col gap-2 md:gap-5 text-3xl sm:text-4xl md:text-[3.2rem] 2xl:text-6xl font-bold sm:mt-16 md:mt-0 xl:mt-0 pt-3">
-  <>Pinnacle Group Tutions</>
-</h1>
-          
+        <h1 className="capitalize flex flex-col gap-2 md:gap-5 text-3xl sm:text-4xl md:text-[3.2rem] 2xl:text-6xl font-bold sm:mt-4 md:mt-0 xl:mt-0 pt-3">
+          <>
+            Pinnacle <br></br> Group Tuitions
+          </>
+        </h1>
+
         <p className="text-lg leading-normal sm:leading-loose my-4 md:my-6">
-          "Empowering Minds, Shaping Futures: Pinnacle Group Tuitions, Where Excellence Meets Education."
+          "Empowering Minds, Shaping Futures: Pinnacle Group Tuitions, Where
+          Excellence Meets Education."
         </p>
       </div>
 
