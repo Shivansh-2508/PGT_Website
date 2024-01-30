@@ -9,6 +9,7 @@ import Monitored from "../../public/features/new_icons/Monitored_Library.svg";
 import PCT from "../../public/features/new_icons/PCT.svg";
 import small from "../../public/features/new_icons/Small_batch.svg";
 import asess from "../../public/features/new_icons/Asses_Regroup.svg";
+
 const QualityFeature = ({ imgSrc, title, subHeading, desc }) => {
   return (
     <div className="flex items-start lg:flex-row sm:flex-col gap-1 sm:gap-4 lg:gap-8">
@@ -83,7 +84,7 @@ const QualityFeatures = () => {
   ];
 
   return (
-    <section className="container mx-auto px-5 md:px-16">
+    <section className="container mx-auto px-5 md:px-16" id="features">
       <span
         className="service-name text-center"
         data-aos="fade-up"
