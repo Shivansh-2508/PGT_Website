@@ -53,7 +53,7 @@ const HeroSection = () => {
 
       <Slider {...sliderSettings} className="w-full relative">
         {images.map((image, index) => (
-          <div key={index} className="relative h-48 md:h-60 lg:h-80">
+          <div key={index} className="relative h-48 md:h-60 lg:h-80 mx-2">
             <Image {...image} className="object-cover w-full h-full" />
           </div>
         ))}

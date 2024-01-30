@@ -15,21 +15,37 @@ const Plan = ({ title }) => {
   );
 };
 
-const PricingCard = ({ name, title, price, btnText, trail }) => {
+const PricingCard = ({
+  name,
+  title,
+  price,
+  btnText,
+  trail,
+  onViewDetailsClick,
+}) => {
+  const handleViewDetailsClick = () => {
+    if (onViewDetailsClick) {
+      onViewDetailsClick();
+    }
+  };
+
   return (
-    <div className="mx-2 md:mx-3 cursor-pointer p-10 transition-all hover:shadow-lg flex flex-col gap-12 rounded-3xl border-neutral-200 border">
+    <div className="mx-2 md:mx-3 cursor-pointer p-10 transition-all hover:shadow-lg flex flex-col gap-12 rounded-3xl border-neutral-200 border text-center">
       <div className="flex flex-col gap-3">
         <h2 className="text-xl font-semibold capitalize">{name}</h2>
         <span className="text-neutral-500">{title}</span>
       </div>
       <div className="flex flex-col gap-5">
-        <Plan title="Integrated - 2,25,000/- " />
-        <Plan title="CBSE - 2,30,000/-" />
-        <Plan title="HSC - 2,25,000/- " />
+        <Plan title="Integrated : " />
+        <Plan title="CBSE : " />
+        <Plan title="HSC : " />
       </div>
       <div className="mx-auto">
-        <h2 class="text-4xl text-center leading-none flex items-center pb-4 mb-4"></h2>
-        <button className="w-fit capitalize text-base hover:bg-rose-600 hover:shadow-md hover:shadow-rose-600 hover:border-2 border-2 border-transparent py-3 px-6 text-white bg-rose-600 hover:border-rose-600 hover:text-white rounded-full">
+        <h2 className="text-4xl text-center leading-none flex items-center pb-4 mb-4"></h2>
+        <button
+          onClick={handleViewDetailsClick}
+          className="w-fit capitalize text-base hover:bg-rose-600 hover:shadow-md hover:shadow-rose-600 hover:border-2 border-2 border-transparent py-3 px-6 text-white bg-rose-600 hover:border-rose-600 hover:text-white rounded-full"
+        >
           {btnText}
         </button>
         <span className="block text-rose-600 mt-5 font-semibold animate-bounce cursor-pointer">
@@ -42,6 +58,53 @@ const PricingCard = ({ name, title, price, btnText, trail }) => {
 
 const Pricing = () => {
   const [plan, setPlan] = useState("Monthly Plan");
+
+  const handleViewDetailsClick = () => {
+    window.location.href = "https://wa.me/+917272883030";
+  };
+
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 4,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
+  const carouselParams = {
+    additionalTransfrom: 0,
+    arrows: false,
+    autoPLaySpeed: 3000,
+    centerMode: false,
+    className: "",
+    containerClass: "carousel-container",
+    customButtonGroup: <ButtonGroup />,
+    dotListClass: "",
+    draggable: true,
+    focusOnSelect: false,
+    infinite: false,
+    itemClass: "",
+    keyBoardControl: true,
+    minimumTouchDrag: 80,
+    renderButtonGroupOutside: true,
+    renderDotsOutside: false,
+    responsive: responsive,
+    showDots: false,
+    sliderClass: "",
+    slidesToSlide: 1,
+  };
+
   return (
     <section
       className="relative container mx-auto px-5 md:px-16 flex flex-col gap-5"
@@ -50,7 +113,7 @@ const Pricing = () => {
     >
       <div>
         <span className="service-name text-center" style={{ fontSize: "26px" }}>
-          PRICING PLAN
+          Courses Offered
         </span>
       </div>
 
@@ -70,94 +133,30 @@ const Pricing = () => {
             title="Comprehensive Exam Preparation"
             price="0"
             btnText="View Details"
+            onViewDetailsClick={handleViewDetailsClick}
           />
+
           <PricingCard
             name="BOARDS"
             title="Core Board Exam Preparation"
             price="15"
             btnText="View Details"
-            trail=""
+            onViewDetailsClick={handleViewDetailsClick}
           />
-          <div className="relative">
-            <PricingCard
-              name="Boards + HSC"
-              title="Complete Maharashtra State Board Support"
-              price="24"
-              btnText="View Details"
-              trail=""
-            />
-          </div>
+
+          <PricingCard
+            name="Boards + HSC "
+            title="Complete Maharashtra State Board Support"
+            price="24"
+            btnText="View Details"
+            onViewDetailsClick={handleViewDetailsClick}
+          />
         </Carousel>
       ) : (
-        <Carousel {...carouselParams}>
-          <PricingCard
-            name="Boards + JEE/NEET"
-            title="For Small teams or office"
-            price="0"
-            btnText="View Details"
-          />
-          <PricingCard
-            name="BOARDS"
-            title="For Enterprise business"
-            price="15"
-            btnText="View Details"
-            trail=""
-          />
-          <div className="relative">
-            <PricingCard
-              name="Boards + HSC"
-              title="For pro level developers"
-              price="24"
-              btnText="View Details"
-              trail=""
-            />
-          </div>
-        </Carousel>
+        <div>{/* Add content or components for other plans */}</div>
       )}
     </section>
   );
 };
 
 export default Pricing;
-
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 4,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-};
-
-const carouselParams = {
-  additionalTransfrom: 0,
-  arrows: false,
-  autoPLaySpeed: 3000,
-  centerMode: false,
-  className: "",
-  containerClass: "carousel-container",
-  customButtonGroup: <ButtonGroup />,
-  dotListClass: "",
-  draggable: true,
-  focusOnSelect: false,
-  infinite: false,
-  itemClass: "",
-  keyBoardControl: true,
-  minimumTouchDrag: 80,
-  renderButtonGroupOutside: true,
-  renderDotsOutside: false,
-  responsive: responsive,
-  showDots: false,
-  sliderClass: "",
-  slidesToSlide: 1,
-};
