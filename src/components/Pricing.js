@@ -1,7 +1,7 @@
 "use client";
 
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ButtonGroup from "./ButtonGroup";
@@ -22,6 +22,8 @@ const PricingCard = ({
   btnText,
   trail,
   onViewDetailsClick,
+  neetContent,
+  mhtCetContent,
 }) => {
   const handleViewDetailsClick = () => {
     if (onViewDetailsClick) {
@@ -29,26 +31,68 @@ const PricingCard = ({
     }
   };
 
+  let cardContent;
+  if (name === "IIT-JEE/NEET + BOARDS") {
+    cardContent = (
+      <>
+        <Plan title="10 Students in a batch" />
+        <Plan title="Classroom Coaching" />
+        <Plan title="Personal Mentor" />
+        <Plan title="5 days a week and 4 hours a day" />
+        <Plan title="3 hours daily DPP sessions" />
+      </>
+    );
+  } else if (name === "MHT-CET + BOARDS") {
+    cardContent = (
+      <>
+        <Plan title="10 Students in a batch" />
+        <Plan title="Classroom Coaching" />
+        <Plan title="Personal Mentor" />
+        <Plan title="6 days a week and 3 hours a day" />
+        <Plan title="2 hours daily DPP sessions" />
+      </>
+    );
+  } else if (name === "CBSE/HSC + BOARDS") {
+    cardContent = (
+      <>
+        <Plan title="10 Students in a batch" />
+        <Plan title="Classroom Coaching" />
+        <Plan title="Personal Mentor" />
+        <Plan title="6 days a week and 3 hours a day" />
+        <Plan title="2 hours daily DPP sessions" />
+      </>
+    );
+  } else {
+    cardContent = (
+      <>
+        <Plan title="10 Students in a batch" />
+        <Plan title="INTEGRATED coaching" />
+        <Plan title="Personal Mentor" />
+        <Plan title="5 days a week and 4 hours a day" />
+        <Plan title="3 hours daily DPP sessions" />
+      </>
+    );
+  }
+
   return (
-    <div className="mx-2 md:mx-3 cursor-pointer p-10 transition-all hover:shadow-lg flex flex-col gap-12 rounded-3xl border-neutral-200 border text-center">
-      <div className="flex flex-col gap-3">
-        <h2 className="text-xl font-semibold capitalize">{name}</h2>
-        <span className="text-neutral-500">{title}</span>
+    <div className="mx-2 md:mx-3 p-5 md:p-8 transition-all hover:shadow-lg flex flex-col gap-6 rounded-lg rounded-b-4xl border-neutral-200 border text-center">
+      <div className="flex flex-col gap-2">
+        <h2 className="text-lg md:text-xl font-semibold capitalize">{name}</h2>
+        <span className="text-neutral-500 text-sm md:text-base">{title}</span>
       </div>
-      <div className="flex flex-col gap-5">
-        <Plan title="Integrated : " />
-        <Plan title="CBSE : " />
-        <Plan title="HSC : " />
+      <div className="flex flex-col gap-3">
+        {cardContent}
+        {/* Render NEET content if available */}
+        {name === "NEET" && neetContent}
       </div>
       <div className="mx-auto">
-        <h2 className="text-4xl text-center leading-none flex items-center pb-4 mb-4"></h2>
         <button
           onClick={handleViewDetailsClick}
-          className="w-fit capitalize text-base hover:bg-rose-600 hover:shadow-md hover:shadow-rose-600 hover:border-2 border-2 border-transparent py-3 px-6 text-white bg-rose-600 hover:border-rose-600 hover:text-white rounded-full"
+          className="w-fit capitalize text-sm md:text-base hover:bg-rose-600 hover:shadow-md hover:shadow-rose-600 hover:border-2 border-2 border-transparent py-2 md:py-3 px-4 md:px-6 text-white bg-rose-600 hover:border-rose-600 hover:text-white rounded-full"
         >
           {btnText}
         </button>
-        <span className="block text-rose-600 mt-5 font-semibold animate-bounce cursor-pointer">
+        <span className="block text-rose-600 mt-3 font-semibold animate-bounce cursor-pointer text-xs md:text-sm">
           {trail}
         </span>
       </div>
@@ -56,8 +100,36 @@ const PricingCard = ({
   );
 };
 
+const neetContent = (
+  <>
+    <Plan title="Paper Pen Monitored Test" />
+    <Plan title="60 Chapterwise Tests" />
+    <Plan title="6 Mock Tests" />
+    <Plan title="5 Full Syllabus Tests" />
+    <Plan title="Doubts Solving Session" />
+  </>
+);
+
 const Pricing = () => {
   const [plan, setPlan] = useState("Monthly Plan");
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const overlay = useRef(null);
+
+  useEffect(() => {
+    const closeMenu = () => {
+      setToggleMenu(false);
+    };
+
+    if (overlay.current) {
+      overlay.current.addEventListener("click", closeMenu);
+    }
+
+    return () => {
+      if (overlay.current) {
+        overlay.current.removeEventListener("click", closeMenu);
+      }
+    };
+  }, [toggleMenu]);
 
   const handleViewDetailsClick = () => {
     window.location.href = "https://wa.me/+917272883030";
@@ -66,7 +138,7 @@ const Pricing = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 4,
+      items: 3,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -74,7 +146,7 @@ const Pricing = () => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      items: 3,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -85,15 +157,16 @@ const Pricing = () => {
   const carouselParams = {
     additionalTransfrom: 0,
     arrows: false,
-    autoPLaySpeed: 3000,
+    autoPlay: true,
+    autoPlaySpeed: 1000,
     centerMode: false,
     className: "",
-    containerClass: "carousel-container",
+    containerClass: "carousel-container  justify-center",
     customButtonGroup: <ButtonGroup />,
     dotListClass: "",
     draggable: true,
     focusOnSelect: false,
-    infinite: false,
+    infinite: true,
     itemClass: "",
     keyBoardControl: true,
     minimumTouchDrag: 80,
@@ -102,7 +175,7 @@ const Pricing = () => {
     responsive: responsive,
     showDots: false,
     sliderClass: "",
-    slidesToSlide: 1,
+    slidesToSlide: 3,
   };
 
   return (
@@ -122,22 +195,22 @@ const Pricing = () => {
           className="capitalize text-sm sm:text-base font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 rounded-full"
           style={{ fontSize: "18px" }}
         >
-          Annual Plan
+          Most Popular
         </div>
       </div>
 
       {plan === "Monthly Plan" ? (
         <Carousel {...carouselParams}>
           <PricingCard
-            name="Boards + JEE/NEET"
-            title="Comprehensive Exam Preparation"
+            name="IIT-JEE/NEET + BOARDS  "
+            title=" "
             price="0"
             btnText="View Details"
             onViewDetailsClick={handleViewDetailsClick}
           />
 
           <PricingCard
-            name="BOARDS"
+            name="MHT-CET + BOARDS"
             title="Core Board Exam Preparation"
             price="15"
             btnText="View Details"
@@ -145,12 +218,81 @@ const Pricing = () => {
           />
 
           <PricingCard
-            name="Boards + HSC "
+            name="CBSE/HSC + BOARDS "
             title="Complete Maharashtra State Board Support"
             price="24"
             btnText="View Details"
             onViewDetailsClick={handleViewDetailsClick}
           />
+        </Carousel>
+      ) : (
+        <div>{/* Add content or components for other plans */}</div>
+      )}
+
+      <br />
+
+      <div className="relative transition-all flex gap-1 mx-auto w-fit bg-slate-50 p-1 rounded-full">
+        <div
+          className="capitalize text-sm sm:text-base font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 rounded-full"
+          style={{ fontSize: "18px" }}
+        >
+          Crash Course
+        </div>
+      </div>
+
+      {plan === "Monthly Plan" ? (
+        <Carousel {...carouselParams}>
+          <PricingCard
+            name="NEET"
+            title="10th March - 30th April"
+            price="29"
+            btnText="View Details"
+            onViewDetailsClick={handleViewDetailsClick}
+          />
+          <PricingCard
+            name="MHT-CET"
+            title="10th March - 30th April"
+            price="29"
+            btnText="View Details"
+            onViewDetailsClick={handleViewDetailsClick}
+          />
+
+          {/* ... (unchanged code for MHT-CET and other cards) */}
+        </Carousel>
+      ) : (
+        <div>{/* Add content or components for other plans */}</div>
+      )}
+
+      <br />
+
+      <div className="relative transition-all flex gap-1 mx-auto w-fit bg-slate-50 p-1 rounded-full">
+        <div
+          className="capitalize text-sm sm:text-base font-semibold sm:py-3 py-2 px-3 sm:px-6 text-rose-600 border-rose-600 rounded-full"
+          style={{ fontSize: "18px" }}
+        >
+          Commerce
+        </div>
+      </div>
+
+      {plan === "Monthly Plan" ? (
+        <Carousel {...carouselParams}>
+          <PricingCard
+            name="XI and XII"
+            title="10th March - 30th April"
+            price="29"
+            btnText="View Details"
+            onViewDetailsClick={handleViewDetailsClick}
+          />
+
+          <PricingCard
+            name="MHT-CET"
+            title="10th March - 25th April"
+            price="19"
+            btnText="View Details"
+            onViewDetailsClick={handleViewDetailsClick}
+          />
+
+          {/* Add more PricingCard components for Crash Course with respective content */}
         </Carousel>
       ) : (
         <div>{/* Add content or components for other plans */}</div>
