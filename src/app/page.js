@@ -32,18 +32,19 @@ export default function Home() {
 
   return (
     <>
-      <div className='flex flex-col gap-16 md:gap-32 '>
+      <div className="flex flex-col gap-16 md:gap-32 ">
         <div>
           <Toaster />
         </div>
         <Head></Head>
         <HeroSection />
-        <QualityFeatures />
         <Features />
+        <QualityFeatures />
+
         {/* <Services /> */}
         {/* <CoreFeatures /> */}
-        <Work />
-        <Community />
+        {/* <Work /> */}
+        {/* <Community /> */}
 
         <Pricing />
         {/*<Team />*/}

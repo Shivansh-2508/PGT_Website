@@ -39,25 +39,23 @@ const HeroSection = () => {
       id="home"
     >
       <div className="md:w-2/3 lg:w-1/2 container px-5 md:px-16 mx-auto">
-      <h1 className="capitalize flex flex-col gap-2 md:gap-5 text-3xl sm:text-4xl md:text-[3.2rem] 2xl:text-6xl font-bold sm:mt-4 md:mt-0 xl:mt-0 mt-9 text-center">
-  <>
-    <span className="flex justify-center">
-      <span className="inline-block text-6xl">Pinnacle</span>
-    </span>
-    <span className="flex justify-center">
-      <span className="inline-block text-4xl">Group Tuitions</span>
-    </span>
-  </>
-</h1>
+        <h1 className="capitalize flex flex-col gap-2 md:gap-5 text-3xl sm:text-4xl md:text-[3.2rem] 2xl:text-6xl font-bold sm:mt-4 md:mt-0 xl:mt-0 mt-9 text-center">
+          <>
+            <span className="flex justify-center">
+              <span className="inline-block text-6xl uppercase">Pinnacle</span>
+            </span>
+            <span className="flex justify-center">
+              <span className="inline-block text-4xl uppercase">
+                Group Tuitions
+              </span>
+            </span>
+          </>
+        </h1>
 
-
-
-
-       <p className="text-base leading-normal sm:text-lg my-4 md:my-6">
-  "Empowering Minds, Shaping Futures: Pinnacle Group Tuitions, Where
-  Excellence Meets Education."
-</p>
-
+        <p className="text-base leading-normal sm:text-lg my-4 md:my-6">
+          Elevate your educational journey where personalized attention meets
+          academic excellence.
+        </p>
       </div>
 
       <Slider {...sliderSettings} className="w-full relative">

@@ -24,7 +24,7 @@ const Features = () => {
   return (
     <section className="container mx-auto px-5 md:px-16" id="features">
       <span className="service-name text-center" style={{ fontSize: "28px" }}>
-        WHY US
+        CONGRATULATIONS !!
       </span>
       <h2 className="title text-center" style={{ fontSize: "18px" }}>
         Meet the Toppers

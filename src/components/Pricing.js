@@ -186,7 +186,7 @@ const Pricing = () => {
     >
       <div>
         <span className="service-name text-center" style={{ fontSize: "26px" }}>
-          Courses Offered
+          Courses WE Offered
         </span>
       </div>
 

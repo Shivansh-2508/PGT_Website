@@ -12,19 +12,18 @@ import asess from "../../public/features/new_icons/Asses_Regroup.svg";
 
 const QualityFeature = ({ imgSrc, title, subHeading, desc }) => {
   return (
-    <div className="flex items-start lg:flex-row sm:flex-col gap-1 sm:gap-4 lg:gap-8">
+    <div className="flex justify-center lg:justify-start items-start lg:flex-row sm:flex-col gap-1 sm:gap-4 lg:gap-8 p-4 border border-neutral-400 rounded-lg">
       <Image src={imgSrc} width={80} height={80} alt="features" />
-      <div className="leading-loose">
+      <div className="leading-loose flex-1 ml-4">
         <h3 className="text-lg md:text-xl font-semibold mb-1">{title}</h3>
         {subHeading && (
           <h4 className="text-sm font-medium mb-4">{subHeading}</h4>
         )}
-        <p className="text-sm">{desc}</p>
+        <p className="text-sm text-justify">{desc}</p>
       </div>
     </div>
   );
 };
-
 const QualityFeatures = () => {
   const featuresData = [
     {
@@ -36,7 +35,7 @@ const QualityFeatures = () => {
     {
       imgSrc: dotpct,
       title: "INTEGRATED PATTERN",
-      subHeading: "Dot Pct",
+      subHeading: "One Topic One Teacher ",
       desc: "IIT-JEE/NEET/MHT-CET are highly competative exams and demand lots of practice and dedicated time with least distraction.",
     },
     {
@@ -53,7 +52,7 @@ const QualityFeatures = () => {
     },
     {
       imgSrc: PCT,
-      title: "PCT",
+      title: "SEPARATE CBSE & HSC BATCHES ",
       subHeading: "CBSE | HSC",
       desc: "We create Seperate batches for CBSE & HSC. As a result we make sure that every student gets a tailored cirriculum to learn and absorb at their speed.",
     },
@@ -97,7 +96,7 @@ const QualityFeatures = () => {
         data-aos="fade-up"
         style={{ fontSize: "18px" }}
       >
-        Amazing useful features
+        Why Join Us
       </h2>
 
       <div
