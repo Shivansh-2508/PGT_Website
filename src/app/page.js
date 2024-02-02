@@ -17,6 +17,8 @@ import Testimonials from "@/components/Testimonials";
 import Work from "@/components/Work";
 import Head from "next/head";
 import { Toaster } from "react-hot-toast";
+import Mission from "../components/mission";
+import OurMission from "@/components/OurMission";
 
 export default function Home() {
   useEffect(() => {
@@ -38,19 +40,21 @@ export default function Home() {
         </div>
         <Head></Head>
         <HeroSection />
-        <QualityFeatures />
         <Features />
-        {/* <Services /> */}
-        {/* <CoreFeatures /> */}
-        <Work />
-        <Community />
-
+        <Testimonials />
         <Pricing />
-        {/*<Team />*/}
 
+        <QualityFeatures />
         <Subscribe />
         <Maps />
-        <Testimonials />
+
+        <OurMission />
+        {/* <Services /> */}
+        {/* <CoreFeatures /> */}
+        {/* <Work /> */}
+        {/* <Community /> */}
+
+        {/*<Team />*/}
       </div>
     </>
   );
