@@ -17,7 +17,6 @@ import Testimonials from "@/components/Testimonials";
 import Work from "@/components/Work";
 import Head from "next/head";
 import { Toaster } from "react-hot-toast";
-import Mission from "../components/mission";
 import OurMission from "@/components/OurMission";
 import CrashCourse from "@/components/CrashCourse";
 import TestSeries from "@/components/TestSeries";
