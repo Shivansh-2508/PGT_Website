@@ -19,25 +19,30 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <head>
-        {/* Basic meta tags */}
         <title>{metadata.title}</title>
-        <meta name='title' content={metadata.title} />
         <meta name='description' content={metadata.description} />
         <meta name='keywords' content={metadata.keywords} />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
 
-        {/* Open Graph meta tags */}
         <meta property='og:type' content='website' />
         <meta property='og:url' content={metadata.url} />
         <meta property='og:title' content={metadata.title} />
         <meta property='og:description' content={metadata.description} />
         <meta property='og:image' content={metadata.imageUrl} />
 
-        {/* Twitter meta tags */}
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='twitter:url' content={metadata.url} />
         <meta property='twitter:title' content={metadata.title} />
         <meta property='twitter:description' content={metadata.description} />
         <meta property='twitter:image' content={metadata.imageUrl} />
+
+        <link rel='icon' type='image/png' sizes='32x32' href='/favicon.png' />
+
+        <link rel='canonical' href={metadata.url} />
+
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+
+        <style>{dmSans.styles}</style>
       </head>
       <body className={dmSans.className}>
         <ThemeProvider>{children}</ThemeProvider>
