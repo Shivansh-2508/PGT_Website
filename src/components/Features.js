@@ -17,7 +17,7 @@ const Features = () => {
     dots: true,
     infinite: true,
     speed: 200,
-    slidesToShow: 2, // Number of items to show at once
+    slidesToShow: 2, 
     slidesToScroll: 1,
   };
 
@@ -35,7 +35,7 @@ const Features = () => {
         <FeatureProduct imgSrc='/features/2file.jpeg' title='' desc='' />
         <FeatureProduct imgSrc='/features/3file.jpeg' title='' desc='' />
         <FeatureProduct imgSrc='/features/4file.jpeg' title='' desc='' />
-        {/* Add more FeatureProduct components as needed */}
+   
       </Slider>
     </section>
   );
