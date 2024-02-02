@@ -19,6 +19,9 @@ import Head from "next/head";
 import { Toaster } from "react-hot-toast";
 import Mission from "../components/mission";
 import OurMission from "@/components/OurMission";
+import CrashCourse from "@/components/CrashCourse";
+import TestSeries from "@/components/TestSeries";
+import Commerce from "@/components/Commerce";
 
 export default function Home() {
   useEffect(() => {
@@ -43,17 +46,18 @@ export default function Home() {
         <Features />
         <Testimonials />
         <Pricing />
+        <CrashCourse />
+        <TestSeries />
+        <Commerce />
 
         <QualityFeatures />
         <Subscribe />
         <Maps />
-
         <OurMission />
         {/* <Services /> */}
         {/* <CoreFeatures /> */}
         {/* <Work /> */}
         {/* <Community /> */}
-
         {/*<Team />*/}
       </div>
     </>

@@ -23,11 +23,11 @@ const PricingCard = ({ name, title, price, btnText, trail }) => {
         <span className='text-neutral-500'>{title}</span>
       </div>
       <div className='flex flex-col gap-5'>
-        <Plan title='10 Students in a BATCH ' />
-        <Plan title='Classrom Coaching' />
-        <Plan title='Personal Mentor' />
-        <Plan title='6 Days a week & 3 Hrs a day' />
-        <Plan title='2 Hrs daily DPP sessions' />
+        <Plan title='Online Monitored Tests ' />
+        <Plan title='60 Chapterwise Test' />
+        <Plan title='6 Mock Unit Tests' />
+        <Plan title='5 Full syllabus Tests' />
+        <Plan title='Doubts Solving Sessions' />
       </div>
       <div className='mx-auto'>
         <h2 class='text-4xl text-center leading-none flex items-center pb-4 mb-4'></h2>
@@ -42,7 +42,7 @@ const PricingCard = ({ name, title, price, btnText, trail }) => {
   );
 };
 
-const Pricing = () => {
+const TestSeries = () => {
   const [plan, setPlan] = useState("Monthly Plan");
   return (
     <section
@@ -53,7 +53,7 @@ const Pricing = () => {
         <span
           className='service-name text-center pb-10'
           style={{ fontSize: "26px" }}>
-          Our Courses
+          Test Series
         </span>
       </div>
 
@@ -61,27 +61,18 @@ const Pricing = () => {
         <>
           <Carousel {...carouselParams}>
             <PricingCard
-              name='IIT-JEE/NEET + Boards'
-              title=''
+              name='NEET'
+              title='FEES - 4.999/-'
               price='0'
-              btnText='Get Details'
+              btnText='View Details'
             />
             <PricingCard
-              name='MHT-CET + BOARDS'
-              title=''
+              name='MHT-CET'
+              title='FEES - 2.999/- '
               price='15'
-              btnText='Get Details'
+              btnText='View Details'
               trail=''
             />
-            <div className='relative'>
-              <PricingCard
-                name='CBSE /HSC Boards '
-                title=''
-                price='24'
-                btnText='Get Details'
-                trail=''
-              />
-            </div>
           </Carousel>
         </>
       ) : (
@@ -91,7 +82,7 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default TestSeries;
 
 const responsive = {
   superLargeDesktop: {
@@ -100,7 +91,7 @@ const responsive = {
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3,
+    items: 2,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
