@@ -16,8 +16,8 @@ const Plan = ({ title }) => {
 
 const PricingCard = ({ name, title, price, btnText, trail }) => {
   return (
-    <div className="mx-2 md:mx-3 cursor-pointer p-10 transition-all hover:shadow-lg flex flex-col gap-12 rounded-3xl border-neutral-200 border">
-      <div className="flex flex-col gap-3">
+    <div className="mx-2 md:mx-3 cursor-pointer p-10 transition-all hover:shadow-lg flex flex-col gap-6 rounded-3xl border-neutral-200 border">
+      <div className="flex flex-col gap-2">
         <h2 className="text-xl font-semibold capitalize">{name}</h2>
         <span className="text-neutral-500">{title}</span>
       </div>

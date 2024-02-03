@@ -13,7 +13,7 @@ import asess from "../../public/features/new_icons/Asses_Regroup.svg";
 const QualityFeature = ({ imgSrc, title, subHeading, desc }) => {
   return (
     <div className="flex items-start lg:flex-row sm:flex-col gap-1 sm:gap-4 lg:gap-8  max-w-sm">
-      <div className="   h-96  py-10 px-10 text-center flex-col justify-center align-center  border rounded-xl element-with-gradient-border ">
+      <div className="   h-96   py-10 px-10 text-center flex-col justify-center align-center  border rounded-xl element-with-gradient-border ">
         <Image
           src={imgSrc}
           width={80}

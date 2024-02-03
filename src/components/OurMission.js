@@ -1,25 +1,43 @@
 import React from "react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
+import banner from "../../public/WPIC.jpg";
+import banner2 from "../../public/LPIC.jpg";
 
 const OurMission = () => {
   const { theme } = useTheme();
 
   return (
-    <section className={`p-6 ${theme === "dark" ? "dark:text-gray-100" : ""}`}>
+    <section
+      className={`p-6 ${theme === "dark" ? "dark:text-gray-100" : ""}`}
+      id="about us"
+    >
       <span
-        className="service-name text-center pb-8"
+        className="service-name text-center mb-12"
         style={{ fontSize: "26px" }}
       >
         About us
       </span>
       <div className="container mx-auto text-center lg:flex lg:justify-end">
         {/* Image */}
-        <div className="lg:w-1/2 lg:pr-4">
-          <img
-            src="https://media.istockphoto.com/id/637234116/photo/doing-it-for-the-love-of-success.jpg?s=2048x2048&w=is&k=20&c=aXSyADer552DfwVg1DJ0-jDo_JjW4U1GtKSI2n77Qwk="
-            alt=""
-            className="object-cover w-full h-full rounded-md"
-          />
+        <div className="lg:w-1/2 max-w-[50vmax] aspect-w-1 aspect-h-1">
+          {theme === "dark" ? (
+            <Image
+              src={banner}
+              alt=""
+              className="object-cover w-full h-full rounded-md"
+              layout="responsive"
+              // Change 40vmin to 40vh
+            />
+          ) : (
+            <Image
+              src={banner2}
+              alt=""
+              className="object-cover w-full h-full rounded-md"
+              layout="responsive"
+              // Change 40vmin to 40vh
+            />
+          )}
         </div>
         {/* Text */}
         <div className="lg:w-1/2 lg:pl-4">

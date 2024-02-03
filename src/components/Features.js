@@ -48,7 +48,7 @@ const Features = () => {
   };
 
   return (
-    <section className="container mx-auto px-5 md:px-16" id="features">
+    <section className="container mx-auto px-5 md:px-16" id="toppers">
       <span className="service-name text-center" style={{ fontSize: "28px" }}>
         Congratulations{" "}
       </span>
