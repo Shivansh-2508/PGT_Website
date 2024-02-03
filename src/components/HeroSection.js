@@ -64,7 +64,7 @@ const HeroSection = () => {
             </span>{" "}
             GROUP TUITIONS
           </>
-          <p className="text-sm mt-3">
+          <p className=" text-sm sm:text-base md:text-lg lg:text-xl  mt-3">
             Elevate your educational journey where personalized attention meets
             academic excellence.
           </p>

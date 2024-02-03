@@ -100,9 +100,10 @@ const Navbar = () => {
             </button>
             {[
               "home",
+              "toppers",
               "testimonial",
               "pricing",
-              "toppers",
+
               "Maps",
               "about us",
             ].map((link) => (

@@ -56,8 +56,8 @@ const Footer = () => {
                 <Link
                   to={"home"}
                   smooth={true}
-                  offset={0}
-                  duration={1000}
+                  offset={-150}
+                  duration={100}
                   className="hover:opacity-75 hover:border-b hover:border-neutral-400 w-fit"
                 >
                   About
@@ -66,21 +66,21 @@ const Footer = () => {
                 <Link
                   to={"pricing"}
                   smooth={true}
-                  offset={0}
-                  duration={1000}
+                  offset={-150}
+                  duration={100}
                   className="hover:opacity-75 hover:border-b hover:border-neutral-400 w-fit"
                 >
                   Courses
                 </Link>
 
                 <Link
-                  to={"features"}
+                  to={"toppers"}
                   smooth={true}
-                  offset={0}
-                  duration={1000}
+                  offset={-150}
+                  duration={100}
                   className="hover:opacity-75 hover:border-b hover:border-neutral-400 w-fit"
                 >
-                  Features
+                  Toppers
                 </Link>
               </nav>
             </div>
@@ -90,8 +90,8 @@ const Footer = () => {
                 <Link
                   to={"features"}
                   smooth={true}
-                  offset={0}
-                  duration={1000}
+                  offset={-150}
+                  duration={100}
                   className="hover:opacity-75 hover:border-b hover:border-neutral-400 w-fit"
                 >
                   Coaching Services
@@ -100,21 +100,11 @@ const Footer = () => {
                 <Link
                   to={"testimonial"}
                   smooth={true}
-                  offset={0}
-                  duration={1000}
+                  offset={-150}
+                  duration={100}
                   className="hover:opacity-75 hover:border-b hover:border-neutral-400 w-fit"
                 >
                   Teaching Reviews
-                </Link>
-
-                <Link
-                  to={"roadmap"}
-                  smooth={true}
-                  offset={0}
-                  duration={1000}
-                  className="hover:opacity-75 hover:border-b hover:border-neutral-400 w-fit"
-                >
-                  Roadmap
                 </Link>
               </nav>
             </div>
@@ -124,8 +114,8 @@ const Footer = () => {
                 <Link
                   to={"Connect"}
                   smooth={true}
-                  offset={0}
-                  duration={1000}
+                  offset={-150}
+                  duration={100}
                   className="hover:opacity-75 hover:border-b hover:border-neutral-400 w-fit"
                 >
                   Email Us
@@ -134,8 +124,8 @@ const Footer = () => {
                 <Link
                   to={"Maps"}
                   smooth={true}
-                  offset={0}
-                  duration={1000}
+                  offset={-150}
+                  duration={100}
                   className="hover:opacity-75 hover:border-b hover:border-neutral-400 w-fit"
                 >
                   Find Us
