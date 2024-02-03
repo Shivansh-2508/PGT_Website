@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const HeroSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -22,6 +23,21 @@ const HeroSection = () => {
       },
     ],
     arrows: false,
+    beforeChange: (oldIndex, newIndex) => {
+      setCurrentSlide(newIndex); // Update current slide index
+    },
+    customPaging: (i) => (
+      <button
+        style={{
+          width: "10px",
+          height: "10px",
+          backgroundColor: "rgb(225 29 72)",
+          borderRadius: "50%",
+          opacity: i === currentSlide ? 1 : 0.5, // Change opacity based on whether it's the current slide
+          marginTop: "30px", // Add margin between dots
+        }}
+      ></button>
+    ),
   };
 
   const images = [
@@ -40,15 +56,18 @@ const HeroSection = () => {
       id="home"
     >
       <div className="md:w-2/3 lg:w-1/2 container px-5 md:px-16 mx-auto">
-        <h1 className="capitalize flex flex-col gap-2 md:gap-5 text-3xl sm:text-4xl md:text-[3.2rem] 2xl:text-6xl font-bold sm:mt-4 md:mt-0 xl:mt-0 mt-9 text-center">
+        <h1 className="capitalize flex flex-col gap-2 md:gap-5 text-2xl sm:text-3xl md:text-[2rem] xl:text-4xl font-bold sm:mt-4 md:mt-0 xl:mt-0 pt-3">
           <>
-            <span className="flex justify-center">
-              <span className="inline-block text-6xl">Pinnacle</span>
-            </span>
-            <span className="flex justify-center">
-              <span className="inline-block text-4xl">Group Tuitions</span>
-            </span>
+            <span className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl">
+              {" "}
+              {"PINNACLE"}
+            </span>{" "}
+            GROUP TUITIONS
           </>
+          <p className="text-sm mt-3">
+            Elevate your educational journey where personalized attention meets
+            academic excellence.
+          </p>
         </h1>
 
         <p className="text-lg leading-normal sm:leading-loose my-4 md:my-6"></p>
