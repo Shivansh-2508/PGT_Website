@@ -12,14 +12,22 @@ import asess from "../../public/features/new_icons/Asses_Regroup.svg";
 
 const QualityFeature = ({ imgSrc, title, subHeading, desc }) => {
   return (
-    <div className="flex justify-center lg:justify-start items-start lg:flex-row sm:flex-col gap-1 sm:gap-4 lg:gap-8 p-4 border border-neutral-400 rounded-lg">
-      <Image src={imgSrc} width={80} height={80} alt="features" />
-      <div className="leading-loose flex-1 ml-4">
-        <h3 className="text-lg md:text-xl font-semibold mb-1">{title}</h3>
-        {subHeading && (
-          <h4 className="text-sm font-medium mb-4">{subHeading}</h4>
-        )}
-        <p className="text-sm text-justify">{desc}</p>
+    <div className="flex items-start lg:flex-row sm:flex-col gap-1 sm:gap-4 lg:gap-8  max-w-sm">
+      <div className="   h-96  py-10 px-10 text-center flex-col justify-center align-center  border rounded-xl element-with-gradient-border ">
+        <Image
+          src={imgSrc}
+          width={80}
+          height={80}
+          alt="features"
+          className="mx-auto"
+        />
+        <div className="leading-loose">
+          <h3 className="text-lg md:text-xl font-semibold mb-1">{title}</h3>
+          {subHeading && (
+            <h4 className="text-sm font-medium mb-4">{subHeading}</h4>
+          )}
+          <p className="text-sm">{desc}</p>
+        </div>
       </div>
     </div>
   );
@@ -34,13 +42,13 @@ const QualityFeatures = () => {
     },
     {
       imgSrc: dotpct,
-      title: "INTEGRATED PATTERN",
-      subHeading: "One Topic One Teacher ",
+      title: "One Topic One Teacher",
+      subHeading: "Dot Pct",
       desc: "IIT-JEE/NEET/MHT-CET are highly competative exams and demand lots of practice and dedicated time with least distraction.",
     },
     {
       imgSrc: Mentorship,
-      title: "MENTORSHIP",
+      title: "MENTO SHIP",
       subHeading: "Guidance at Every Step",
       desc: "At every stage in our journey of 2 Years you will not find yourself alone. Special assistance at each and every stage of course",
     },
@@ -52,7 +60,7 @@ const QualityFeatures = () => {
     },
     {
       imgSrc: PCT,
-      title: "SEPARATE CBSE & HSC BATCHES ",
+      title: "Separate CBSE &HSC Batches",
       subHeading: "CBSE | HSC",
       desc: "We create Seperate batches for CBSE & HSC. As a result we make sure that every student gets a tailored cirriculum to learn and absorb at their speed.",
     },
@@ -89,14 +97,15 @@ const QualityFeatures = () => {
         data-aos="fade-up"
         style={{ fontSize: "26px" }}
       >
-        QUALITY FEATURES
+        Why Join Us?
       </span>
+
       <h2
         className="title text-center"
         data-aos="fade-up"
         style={{ fontSize: "18px" }}
       >
-        Why Join Us
+        Pinnacle Group Tuitions
       </h2>
 
       <div

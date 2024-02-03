@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+dy {
   overflow-x: hidden;
 }
 
@@ -59,3 +59,11 @@ input::placeholder {
 .scrollbar::-webkit-scrollbar {
   height: 0;
 }
+
+.element-with-gradient-border {
+  border:.2rem solid transparent; 
+  border-color:rgb(225, 29, 72);
+
+
+}
+

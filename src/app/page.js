@@ -17,12 +17,17 @@ import Testimonials from "@/components/Testimonials";
 import Work from "@/components/Work";
 import Head from "next/head";
 import { Toaster } from "react-hot-toast";
+import OurMission from "@/components/OurMission";
+import CrashCourse from "@/components/CrashCourse";
+import TestSeries from "@/components/TestSeries";
+import Commerce from "@/components/Commerce";
 
 export default function Home() {
   useEffect(() => {
     Aos.init({
       duration: 800,
       easing: "ease-in-out",
+      once: true,
     });
 
     return () => {
@@ -36,22 +41,29 @@ export default function Home() {
         <div>
           <Toaster />
         </div>
-        <Head></Head>
+        <Head>
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+        </Head>
         <HeroSection />
         <Features />
-        <QualityFeatures />
+        <Testimonials />
+        <Pricing />
+        <CrashCourse />
+        <TestSeries />
+        <Commerce />
 
+        <QualityFeatures />
+        <Subscribe />
+        <Maps />
+        <OurMission />
         {/* <Services /> */}
         {/* <CoreFeatures /> */}
         {/* <Work /> */}
         {/* <Community /> */}
-
-        <Pricing />
         {/*<Team />*/}
-
-        <Subscribe />
-        <Maps />
-        <Testimonials />
       </div>
     </>
   );
