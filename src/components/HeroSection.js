@@ -9,7 +9,7 @@ const HeroSection = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -21,6 +21,7 @@ const HeroSection = () => {
         },
       },
     ],
+    arrows: false,
   };
 
   const images = [
@@ -35,26 +36,28 @@ const HeroSection = () => {
 
   return (
     <section
-      className='text-center flex flex-col gap-5 sm:gap-5 items-center justify-center sm:mt-16 md:mt-8 lg:mt-12 relative z-10 pt-16 sm:pt-14 md:pt-10 xl:pt-6'
-      id='home'>
-      <div className='md:w-2/3 lg:w-1/2 container px-5 md:px-16 mx-auto'>
-        <h1 className='capitalize flex flex-col gap-2 md:gap-5 text-2xl sm:text-3xl md:text-[2rem] xl:text-4xl font-bold sm:mt-4 md:mt-0 xl:mt-0 pt-3'>
+      className="text-center flex flex-col gap-5 sm:gap-5 items-center justify-center sm:mt-16 md:mt-8 lg:mt-12 relative z-10 pt-16 sm:pt-14 md:pt-10 xl:pt-6"
+      id="home"
+    >
+      <div className="md:w-2/3 lg:w-1/2 container px-5 md:px-16 mx-auto">
+        <h1 className="capitalize flex flex-col gap-2 md:gap-5 text-3xl sm:text-4xl md:text-[3.2rem] 2xl:text-6xl font-bold sm:mt-4 md:mt-0 xl:mt-0 mt-9 text-center">
           <>
-            <span className=' text-5xl sm:text-7xl md:text-[4rem] xl:text-7xl'>
-              {" "}
-              Pinnacle{" "}
-            </span>{" "}
-            <br></br> Group Tuitions
+            <span className="flex justify-center">
+              <span className="inline-block text-6xl">Pinnacle</span>
+            </span>
+            <span className="flex justify-center">
+              <span className="inline-block text-4xl">Group Tuitions</span>
+            </span>
           </>
         </h1>
 
-        <p className='text-lg leading-normal sm:leading-loose my-4 md:my-6'></p>
+        <p className="text-lg leading-normal sm:leading-loose my-4 md:my-6"></p>
       </div>
 
-      <Slider {...sliderSettings} className='w-full relative'>
+      <Slider {...sliderSettings} className="w-full relative">
         {images.map((image, index) => (
-          <div key={index} className='relative h-48 md:h-60 lg:h-80'>
-            <Image {...image} className='object-cover w-full h-full' />
+          <div key={index} className="relative h-48 md:h-60 lg:h-80">
+            <Image {...image} className="object-cover w-full h-full" />
           </div>
         ))}
       </Slider>

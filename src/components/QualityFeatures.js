@@ -12,21 +12,21 @@ import asess from "../../public/features/new_icons/Asses_Regroup.svg";
 
 const QualityFeature = ({ imgSrc, title, subHeading, desc }) => {
   return (
-    <div className='flex items-start lg:flex-row sm:flex-col gap-1 sm:gap-4 lg:gap-8  max-w-sm'>
-      <div className=' animate-pulse  h-96  py-10 px-10 text-center flex-col justify-center align-center  border rounded-xl element-with-gradient-border '>
+    <div className="flex items-start lg:flex-row sm:flex-col gap-1 sm:gap-4 lg:gap-8  max-w-sm">
+      <div className="   h-96  py-10 px-10 text-center flex-col justify-center align-center  border rounded-xl element-with-gradient-border ">
         <Image
           src={imgSrc}
           width={80}
           height={80}
-          alt='features'
-          className='mx-auto'
+          alt="features"
+          className="mx-auto"
         />
-        <div className='leading-loose'>
-          <h3 className='text-lg md:text-xl font-semibold mb-1'>{title}</h3>
+        <div className="leading-loose">
+          <h3 className="text-lg md:text-xl font-semibold mb-1">{title}</h3>
           {subHeading && (
-            <h4 className='text-sm font-medium mb-4'>{subHeading}</h4>
+            <h4 className="text-sm font-medium mb-4">{subHeading}</h4>
           )}
-          <p className='text-sm'>{desc}</p>
+          <p className="text-sm">{desc}</p>
         </div>
       </div>
     </div>
@@ -92,24 +92,27 @@ const QualityFeatures = () => {
   ];
 
   return (
-    <section className='container mx-auto px-5 md:px-16' id='features'>
+    <section className="container mx-auto px-5 md:px-16" id="features">
       <span
-        className='service-name text-center'
-        data-aos='fade-up'
-        style={{ fontSize: "26px" }}>
+        className="service-name text-center"
+        data-aos="fade-up"
+        style={{ fontSize: "26px" }}
+      >
         Why Join Us?
       </span>
 
       <h2
-        className='title text-center'
-        data-aos='fade-up'
-        style={{ fontSize: "18px" }}>
+        className="title text-center"
+        data-aos="fade-up"
+        style={{ fontSize: "18px" }}
+      >
         Pinnacle Group Tuitions
       </h2>
 
       <div
-        className='grid gap-x-4 gap-y-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 md:mt-20 lg:w-[88%] mx-auto'
-        data-aos='fade-up'>
+        className="grid gap-x-4 gap-y-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 md:mt-20 lg:w-[88%] mx-auto"
+        data-aos="fade-up"
+      >
         {featuresData.map((feature, index) => (
           <QualityFeature key={index} {...feature} />
         ))}
