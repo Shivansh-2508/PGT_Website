@@ -27,7 +27,7 @@ const HeroSection = () => {
       setCurrentSlide(newIndex); // Update current slide index
     },
     customPaging: (i) => (
-      <button
+      <div
         style={{
           width: "10px",
           height: "10px",
@@ -36,7 +36,7 @@ const HeroSection = () => {
           opacity: i === currentSlide ? 1 : 0.5, // Change opacity based on whether it's the current slide
           marginTop: "30px", // Add margin between dots
         }}
-      ></button>
+      ></div>
     ),
   };
 
