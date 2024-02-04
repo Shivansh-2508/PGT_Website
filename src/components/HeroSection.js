@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const HeroSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
   const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -21,6 +22,22 @@ const HeroSection = () => {
         },
       },
     ],
+    arrows: false,
+    beforeChange: (oldIndex, newIndex) => {
+      setCurrentSlide(newIndex); // Update current slide index
+    },
+    customPaging: (i) => (
+      <button
+        style={{
+          width: "10px",
+          height: "10px",
+          backgroundColor: "rgb(225 29 72)",
+          borderRadius: "50%",
+          opacity: i === currentSlide ? 1 : 0.5, // Change opacity based on whether it's the current slide
+          marginTop: "30px", // Add margin between dots
+        }}
+      ></button>
+    ),
   };
 
   const images = [
@@ -47,7 +64,7 @@ const HeroSection = () => {
             </span>{" "}
             GROUP TUITIONS
           </>
-          <p className="text-sm mt-3">
+          <p className=" text-sm sm:text-base md:text-lg lg:text-xl  mt-3">
             Elevate your educational journey where personalized attention meets
             academic excellence.
           </p>
@@ -58,7 +75,7 @@ const HeroSection = () => {
 
       <Slider {...sliderSettings} className="w-full relative">
         {images.map((image, index) => (
-          <div key={index} className="relative h-48 md:h-60 lg:h-80">
+          <div key={index} className="relative h-48 md:h-60 lg:h-80 mx-2">
             <Image {...image} className="object-cover w-full h-full" />
           </div>
         ))}

@@ -27,6 +27,7 @@ export default function Home() {
     Aos.init({
       duration: 800,
       easing: "ease-in-out",
+      once: true,
     });
 
     return () => {
@@ -36,11 +37,16 @@ export default function Home() {
 
   return (
     <>
-      <div className='flex flex-col gap-16 md:gap-32 '>
+      <div className="flex flex-col gap-16 md:gap-32 ">
         <div>
           <Toaster />
         </div>
-        <Head></Head>
+        <Head>
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+        </Head>
         <HeroSection />
         <Features />
         <Testimonials />
