@@ -57,9 +57,10 @@ const Features = () => {
       </h2>
 
       <Slider {...sliderSettings} className="mt-5 md:mt-10">
-        <FeatureProduct imgSrc="/features/1file.jpeg" title="" desc="" />
         <FeatureProduct imgSrc="/features/2file.jpeg" title="" desc="" />
         <FeatureProduct imgSrc="/features/3file.jpeg" title="" desc="" />
+        <FeatureProduct imgSrc="/features/1file.jpeg" title="" desc="" />
+
         <FeatureProduct imgSrc="/features/4file.jpeg" title="" desc="" />
       </Slider>
     </section>

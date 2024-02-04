@@ -14,65 +14,7 @@ const Plan = ({ title }) => {
   );
 };
 
-const PricingCard = ({
-  name,
-  title,
-  price,
-  btnText,
-  trail,
-  onViewDetailsClick,
-  neetContent,
-  mhtCetContent,
-}) => {
-  const handleViewDetailsClick = () => {
-    if (onViewDetailsClick) {
-      onViewDetailsClick();
-    }
-  };
-
-  let cardContent;
-  if (name === "IIT-JEE/NEET + BOARDS") {
-    cardContent = (
-      <>
-        <Plan title="10 Students in a batch" />
-        <Plan title="Classroom Coaching" />
-        <Plan title="Personal Mentor" />
-        <Plan title="5 days a week and 4 hours a day" />
-        <Plan title="3 hours daily DPP sessions" />
-      </>
-    );
-  } else if (name === "MHT-CET + BOARDS") {
-    cardContent = (
-      <>
-        <Plan title="10 Students in a batch" />
-        <Plan title="Classroom Coaching" />
-        <Plan title="Personal Mentor" />
-        <Plan title="6 days a week and 3 hours a day" />
-        <Plan title="2 hours daily DPP sessions" />
-      </>
-    );
-  } else if (name === "CBSE/HSC + BOARDS") {
-    cardContent = (
-      <>
-        <Plan title="10 Students in a batch" />
-        <Plan title="Classroom Coaching" />
-        <Plan title="Personal Mentor" />
-        <Plan title="6 days a week and 3 hours a day" />
-        <Plan title="2 hours daily DPP sessions" />
-      </>
-    );
-  } else {
-    cardContent = (
-      <>
-        <Plan title="10 Students in a batch" />
-        <Plan title="INTEGRATED coaching" />
-        <Plan title="Personal Mentor" />
-        <Plan title="5 days a week and 4 hours a day" />
-        <Plan title="3 hours daily DPP sessions" />
-      </>
-    );
-  }
-
+const PricingCard = ({ name, title, btnText, trail, details }) => {
   return (
     <div className="mx-2 md:mx-3 p-5 md:p-8 transition-all hover:shadow-lg flex flex-col gap-6 rounded-lg rounded-b-4xl border-neutral-200 border text-center">
       <div className="flex flex-col gap-2">
@@ -80,16 +22,16 @@ const PricingCard = ({
         <span className="text-neutral-500 text-sm md:text-base">{title}</span>
       </div>
       <div className="flex flex-col gap-5">
-        <Plan title="10 Students in a BATCH " />
-        <Plan title="Classroom Coaching" />
-        <Plan title="Personal Mentor" />
-        <Plan title="6 Days a week & 3 Hrs a day" />
-        <Plan title="2 Hrs daily DPP sessions" />
+        {details.map((detail, index) => (
+          <Plan key={index} title={detail} />
+        ))}
       </div>
       <div className="mx-auto">
         <button
-          onClick={handleViewDetailsClick}
           className="w-fit capitalize text-sm md:text-base hover:bg-rose-600 hover:shadow-md hover:shadow-rose-600 hover:border-2 border-2 border-transparent py-2 md:py-3 px-4 md:px-6 text-white bg-rose-600 hover:border-rose-600 hover:text-white rounded-full"
+          onClick={() => {
+            window.location.href = "https://wa.me/+917272883030";
+          }}
         >
           {btnText}
         </button>
@@ -101,15 +43,131 @@ const PricingCard = ({
   );
 };
 
-const neetContent = (
-  <>
-    <Plan title="Paper Pen Monitored Test" />
-    <Plan title="60 Chapterwise Tests" />
-    <Plan title="6 Mock Tests" />
-    <Plan title="5 Full Syllabus Tests" />
-    <Plan title="Doubts Solving Session" />
-  </>
-);
+const coursesData = [
+  {
+    name: "IIT-JEE/NEET + Boards",
+    title: "",
+    btnText: "Get Details",
+    details: [
+      "10 Students in a batch",
+      "Integrated Coaching",
+      "Personal Mentor",
+      "5 days a week and 4 hours a day",
+      "3 hours daily DPP sessions",
+    ],
+  },
+  {
+    name: "MHT-CET + BOARDS",
+    title: "",
+    btnText: "Get Details",
+    trail: "",
+    details: [
+      "10 Students in a batch",
+      "Classroom Coaching",
+      "Personal Mentor",
+      "6 days a week and 3 hours a day",
+      "2 hours daily DPP sessions",
+    ],
+  },
+  {
+    name: "CBSE/HSC Boards",
+    title: "",
+    btnText: "Get Details",
+    trail: "",
+    details: [
+      "10 Students in a batch",
+      "Classroom Coaching",
+      "Personal Mentor",
+      "6 days a week and 3 hours a day",
+      "2 hours daily DPP sessions",
+    ],
+  },
+];
+
+const crashCourseData = [
+  {
+    name: "NEET",
+    title: "FEES - 12,999/- (per subject)",
+    btnText: "Get Details",
+    trail: "",
+    details: [
+      "All round revision",
+      "Doubts Clearing Session",
+      "50 Days intensive practice",
+      "10 part tests",
+      "5 full tests",
+    ],
+  },
+  {
+    name: "MHT-CET",
+    title: "FEES - 24,999/- (PCM/PCB)",
+    btnText: "Get Details",
+    trail: "",
+    details: [
+      "Complete syllabus Revision",
+      "Doubts Solving sessions",
+      "45 days intensive course",
+      "10 Parts test",
+      "5 Full test",
+    ],
+  },
+];
+
+const testSeriesData = [
+  {
+    name: "MHT-CET",
+    title: "FEES - 2,999/-",
+    btnText: "Get Details",
+    trail: "",
+    details: [
+      "Online Monitored Classes",
+      "60 Chapterwise test",
+      "6 Mock Unit Test",
+      "5 Full syllabus test",
+      "Doubt Solving Sessions",
+    ],
+  },
+  {
+    name: "NEET",
+    title: "FEES - 4,999/-",
+    btnText: "Get Details",
+    trail: "",
+    details: [
+      "Pen-paper Monitored Test",
+      "60 Chapterwise test",
+      "6 Mock Unit Test",
+      "5 Full syllabus test",
+      "Doubt Solving Sessions",
+    ],
+  },
+];
+
+const commerceData = [
+  {
+    name: "XI and XII (CBSE)",
+    title: "",
+    btnText: "Get Details",
+    trail: "",
+    details: [
+      "10 students in a batch",
+      "6 days a week",
+      "3 hrs a day",
+      "Personal Mentor",
+    ],
+  },
+  {
+    name: "CA(f)/ CS",
+
+    btnText: "Get Details",
+    trail: "",
+    details: [
+      "Private Batch",
+      "1 on 1 teacher",
+      "Test series",
+      "Personal Mentor",
+    ],
+  },
+];
 
 const Pricing = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -133,7 +191,7 @@ const Pricing = () => {
       setCurrentSlide(newIndex); // Update current slide index
     },
     customPaging: (i) => (
-      <button
+      <div
         style={{
           width: "10px",
           height: "10px",
@@ -142,46 +200,74 @@ const Pricing = () => {
           opacity: i === currentSlide ? 1 : 0.5, // Change opacity based on whether it's the current slide
           marginTop: "30px", // Add margin between dots
         }}
-      ></button>
+      ></div>
     ),
   };
 
   return (
     <section
       className="relative container mx-auto px-5 md:px-16 flex flex-col gap-5"
-      id="pricing"
+      id="courses"
       data-aos="fade-up"
     >
       <div>
         <span
-          className="service-name text-center pb-1"
+          className="service-name text-center px-1"
           style={{ fontSize: "26px" }}
         >
           Our Courses
         </span>
       </div>
 
-      <Slider {...sliderSettings} className="mt-1 md:mt-20">
-        <PricingCard
-          name="IIT-JEE/NEET + Boards"
-          title=""
-          price="0"
-          btnText="Get Details"
-        />
-        <PricingCard
-          name="MHT-CET + BOARDS"
-          title=""
-          price="15"
-          btnText="Get Details"
-          trail=""
-        />
-        <PricingCard
-          name="CBSE /HSC Boards "
-          title=""
-          price="24"
-          btnText="Get Details"
-          trail=""
-        />
+      <Slider {...sliderSettings} className="mt-1 md:mt-10">
+        {coursesData.map((course, index) => (
+          <PricingCard key={index} {...course} />
+        ))}
+      </Slider>
+
+      <div>
+        <span
+          className="service-name text-center mt-12 mb-1"
+          style={{ fontSize: "26px" }}
+        >
+          Crash Course
+        </span>
+      </div>
+
+      <Slider {...sliderSettings} className="mt-1 md:mt-10">
+        {crashCourseData.map((course, index) => (
+          <PricingCard key={index} {...course} />
+        ))}
+      </Slider>
+
+      <div>
+        <span
+          className="service-name text-center mt-12 mb-1"
+          style={{ fontSize: "26px" }}
+        >
+          Test Series
+        </span>
+      </div>
+
+      <Slider {...sliderSettings} className="mt-1 md:mt-10">
+        {testSeriesData.map((course, index) => (
+          <PricingCard key={index} {...course} />
+        ))}
+      </Slider>
+
+      <div>
+        <span
+          className="service-name text-center mt-12 mb-1"
+          style={{ fontSize: "26px" }}
+        >
+          Commerce
+        </span>
+      </div>
+
+      <Slider {...sliderSettings} className="mt-1 md:mt-10">
+        {commerceData.map((course, index) => (
+          <PricingCard key={index} {...course} />
+        ))}
       </Slider>
     </section>
   );

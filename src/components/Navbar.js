@@ -102,8 +102,7 @@ const Navbar = () => {
               "home",
               "toppers",
               "testimonial",
-              "pricing",
-
+              "courses",
               "Maps",
               "about us",
             ].map((link) => (

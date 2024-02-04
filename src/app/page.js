@@ -51,9 +51,6 @@ export default function Home() {
         <Features />
         <Testimonials />
         <Pricing />
-        <CrashCourse />
-        <TestSeries />
-        <Commerce />
 
         <QualityFeatures />
         <Subscribe />

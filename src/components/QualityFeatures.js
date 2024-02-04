@@ -48,7 +48,7 @@ const QualityFeatures = () => {
     },
     {
       imgSrc: Mentorship,
-      title: "MENTO SHIP",
+      title: "MENTORSHIP",
       subHeading: "Guidance at Every Step",
       desc: "At every stage in our journey of 2 Years you will not find yourself alone. Special assistance at each and every stage of course",
     },
@@ -68,7 +68,7 @@ const QualityFeatures = () => {
       imgSrc: flexi,
       title: "FLEXIBLE PAYMENTS",
       subHeading: "Customized Payment Plans",
-      desc: "Pay for lith in 1st year & 12th in 2nd year. This will help you plan your finances while you make sure you give your CHILD the best quality education.",
+      desc: "Pay for 11th in 1st year & 12th in 2nd year. This will help you plan your finances while you make sure you give your CHILD the best quality education.",
     },
     {
       imgSrc: Mission,
