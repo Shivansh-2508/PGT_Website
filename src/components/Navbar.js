@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import Link from "next/link";
 import Image1 from "../../public/dark_logo.png";
 import Image2 from "../../public/dark_logo.png";
 
@@ -71,7 +72,7 @@ const Navbar = () => {
       } w-full z-50 fixed top-0 left-0 pt-1 mb-10`}
     >
       <div className="container px-5 md:px-16 flex items-center justify-between mx-auto ">
-        <Link to={"/"} smooth={true} offset={-150} duration={100}>
+        <ScrollLink to={"/"} smooth={true} offset={-150} duration={100}>
           <h2 className="text-3xl">
             {theme === "dark" ? (
               <Image src={Image1} alt="Dark Image" width={100} />
@@ -79,7 +80,7 @@ const Navbar = () => {
               <Image src={Image2} alt="light" width={100} />
             )}
           </h2>
-        </Link>
+        </ScrollLink>
 
         <div>
           <ul
@@ -113,11 +114,19 @@ const Navbar = () => {
                 } capitalize border-b py-4 md:border-none md:py-0 hover:text-rose-600 cursor-pointer`}
                 onClick={() => setSelectedItem(link)}
               >
-                <Link to={`${link}`} smooth={true} offset={-150} duration={100}>
+                <ScrollLink
+                  to={`${link}`}
+                  smooth={true}
+                  offset={-150}
+                  duration={100}
+                >
                   {link}
-                </Link>
+                </ScrollLink>
               </li>
             ))}
+            <li className="capitalize border-b py-4 md:border-none md:py-0 hover:text-rose-600 cursor-pointer">
+              <Link href="/login">Login</Link>
+            </li>
 
             <div className="md:hidden mx-auto absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-3">
               <Link href="#" target="_blank">
