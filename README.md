@@ -52,6 +52,6 @@ For contributions and feedback, please check out the Next.js GitHub repository. 
 Deployment
 Effortlessly deploy your Next.js app using the Vercel Platform from the creators of Next.js. Refer to the Next.js deployment documentation for detailed deployment instructions.
 
-Visit the https://pinnacle.thedd.tech/ to explore the live version.
+Visit the https://www.pinnaclegrouptuitions.in/ to explore the live version.
 
 Thank you for being part of the journey in developing the Pinnacle Group Tuitions website! Your commitment to excellence is valued and appreciated.
